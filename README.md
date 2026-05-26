@@ -1,16 +1,15 @@
-## Hi there 👋
+# Shreyash Swami
+> **Open For Work**
 
-<!--
-**Shreyash0712/Shreyash0712** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+- **Currently working on:** [Collab-Fun](https://github.com/Shreyash0712/collab-fun) | [Live Link](https://collabfun.qzz.io/)
+- **Learning:** AWS, Docker, Web Development
+- **Contact:** [shreyash.swami2476@gmail.com](mailto:shreyash.swami2476@gmail.com) • [LinkedIn](https://linkedin.com/in/shreyashswami)
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### Metrics
+
+<!-- The metrics image will be generated and committed automatically by the GitHub Action -->
+<picture>
+  <img alt="Metrics" src="https://raw.githubusercontent.com/Shreyash0712/Shreyash0712/main/github-metrics.svg">
+</picture>
