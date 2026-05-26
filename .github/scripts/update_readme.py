@@ -269,16 +269,17 @@ def main():
             lines.append(pad_line("Pushed", f"{today_commits} commits to {repos_str}"))
             
             for sha, msg, repo, tstr in recent_activity:
-                left_part = f"   > [{sha}] "
-                right_part = f" - {repo} @ {tstr}"
-                avail = TOTAL_WIDTH - len(left_part) - len(right_part) - 1
+                right_part = f" {repo} @ {tstr}"
+                avail_msg = TOTAL_WIDTH - len(f".    > [{sha}] ") - len(right_part)
                 
-                if len(msg) > avail:
-                    msg = msg[:max(0, avail-3)] + "..."
+                if len(msg) > avail_msg:
+                    msg = msg[:max(0, avail_msg-3)] + "..."
                 
-                msg_str = f"{left_part}{msg}{right_part}"
-                msg_str = msg_str.ljust(TOTAL_WIDTH)[:TOTAL_WIDTH]
-                lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(msg_str)}</tspan>')
+                left_for_calc = f".    > [{sha}] {msg} "
+                dots = "." * max(1, TOTAL_WIDTH - len(left_for_calc) - len(right_part))
+                
+                rendered_left = f"   > [{sha}] {msg} "
+                lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(rendered_left)}</tspan><tspan class="dots">{dots}</tspan><tspan class="muted">{esc(right_part)}</tspan>')
             
         if today_prs > 0:
             lines.append(pad_line("Pull.Requests", f"Worked on {today_prs} PR(s)"))
