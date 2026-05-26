@@ -149,14 +149,16 @@ def main():
         last_14_days = days[-14:]
         counts = [day["contributionCount"] for day in last_14_days]
         
-        ticks = [' ', '▂', '▃', '▄', '▅', '▆', '▇', '█']
+        ticks = ['•', '▂', '▃', '▄', '▅', '▆', '▇', '█']
         max_val = max(counts) if counts else 0
         sparkline = ""
         for count in counts:
             if max_val == 0:
                 sparkline += ticks[0]
             else:
-                idx = int((count / max_val) * 7)
+                idx = max(0, min(7, int((count / max_val) * 7)))
+                if count == 0:
+                    idx = 0
                 sparkline += ticks[idx]
     except Exception as e:
         commits = "N/A"
@@ -230,7 +232,7 @@ def main():
         left = f". {label}: "
         right = f" [{sparkline_str}]"
         dots = "." * max(1, (TOTAL_WIDTH - len(left) - len(right)))
-        return f'<tspan class="dots">. </tspan><tspan class="label">{esc(label)}: </tspan><tspan class="dots">{dots} [</tspan><tspan class="header">{esc(sparkline_str)}</tspan><tspan class="dots">]</tspan>'
+        return f'<tspan class="dots">. </tspan><tspan class="label">{esc(label)}: </tspan><tspan class="dots">{dots} [</tspan><tspan class="header" dominant-baseline="text-after-edge">{esc(sparkline_str)}</tspan><tspan class="dots">]</tspan>'
 
     lines = [
         make_top_header("shreyash@swami", current_date_str),
