@@ -77,11 +77,19 @@ def main():
                 if commits_list:
                     for c in commits_list:
                         sha = c.get("sha", "")[:7]
-                        msg = c.get("message", "").split("\n")[0][:25]
+                        msg = c.get("message", "").split("\n")[0]
                         recent_activity.append((sha, msg, r_name, time_str))
                 else:
-                    push_id = str(event["payload"].get("push_id", "Push"))[:7]
-                    recent_activity.append((push_id, f"Pushed {size} commit(s)", r_name, time_str))
+                    head_sha = event["payload"].get("head")
+                    msg = f"Pushed {size} commit(s)"
+                    if head_sha:
+                        try:
+                            commit_info = fetch_json(f"https://api.github.com/repos/{repo_name}/commits/{head_sha}", token)
+                            msg = commit_info["commit"]["message"].split("\n")[0]
+                        except Exception:
+                            pass
+                    push_id = head_sha[:7] if head_sha else str(event["payload"].get("push_id", "Push"))[:7]
+                    recent_activity.append((push_id, msg, r_name, time_str))
             elif etype == "PullRequestEvent" and event["payload"].get("action") in ["opened", "closed"]:
                 today_prs += 1
             elif etype == "IssuesEvent" and event["payload"].get("action") in ["opened", "closed"]:
@@ -260,10 +268,16 @@ def main():
                 repos_str = f"{len(today_repos)} repositories"
             lines.append(pad_line("Pushed", f"{today_commits} commits to {repos_str}"))
             
-            for sha, msg, repo, tstr in recent_activity[:5]:
-                msg_str = f"   > [{sha}] {msg} - {repo} @ {tstr}"
-                if len(msg_str) > TOTAL_WIDTH - 2:
-                    msg_str = msg_str[:TOTAL_WIDTH - 5] + "..."
+            for sha, msg, repo, tstr in recent_activity:
+                left_part = f"   > [{sha}] "
+                right_part = f" - {repo} @ {tstr}"
+                avail = TOTAL_WIDTH - len(left_part) - len(right_part) - 1
+                
+                if len(msg) > avail:
+                    msg = msg[:max(0, avail-3)] + "..."
+                
+                msg_str = f"{left_part}{msg}{right_part}"
+                msg_str = msg_str.ljust(TOTAL_WIDTH)[:TOTAL_WIDTH]
                 lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(msg_str)}</tspan>')
             
         if today_prs > 0:
