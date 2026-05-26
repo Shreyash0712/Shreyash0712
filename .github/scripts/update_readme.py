@@ -66,6 +66,13 @@ def main():
         contributionsCollection {
           totalCommitContributions
           totalPullRequestContributions
+          contributionCalendar {
+            weeks {
+              contributionDays {
+                contributionCount
+              }
+            }
+          }
         }
         repositoriesContributedTo(first: 1, contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]) {
           totalCount
@@ -80,10 +87,28 @@ def main():
         commits = contrib_collection["totalCommitContributions"]
         prs = contrib_collection["totalPullRequestContributions"]
         contrib = gql_data["data"]["user"]["repositoriesContributedTo"]["totalCount"]
+        
+        weeks = contrib_collection["contributionCalendar"]["weeks"]
+        days = []
+        for week in weeks:
+            days.extend(week["contributionDays"])
+        last_14_days = days[-14:]
+        counts = [day["contributionCount"] for day in last_14_days]
+        
+        ticks = [' ', '▂', '▃', '▄', '▅', '▆', '▇', '█']
+        max_val = max(counts) if counts else 0
+        sparkline = ""
+        for count in counts:
+            if max_val == 0:
+                sparkline += ticks[0]
+            else:
+                idx = int((count / max_val) * 7)
+                sparkline += ticks[idx]
     except Exception as e:
         commits = "N/A"
         prs = "N/A"
         contrib = "N/A"
+        sparkline = "              "
 
     # 4. Date and Uptime
     dob = date(2004, 12, 7) 
@@ -147,6 +172,12 @@ def main():
         dashes = "-" * max(1, (TOTAL_WIDTH - len(base) - len(right)))
         return f'<tspan class="header">{esc(base)}{dashes}{esc(right)}</tspan>'
 
+    def pad_activity(label, sparkline_str):
+        left = f". {label}: "
+        right = f" [{sparkline_str}]"
+        dots = "." * max(1, (TOTAL_WIDTH - len(left) - len(right)))
+        return f'<tspan class="dots">. </tspan><tspan class="label">{esc(label)}: </tspan><tspan class="dots">{dots} [</tspan><tspan class="header">{esc(sparkline_str)}</tspan><tspan class="dots">]</tspan>'
+
     lines = [
         make_top_header("shreyash@swami", current_date_str),
         pad_line("OS", "Windows 11, Linux (Fedora)"),
@@ -170,6 +201,7 @@ def main():
         pad_double("Repos", f"{fmt(public_repos)} [Contrib: {fmt(contrib)}]", "Stars", fmt(stars)),
         pad_double("Commits", fmt(commits), "Followers", fmt(followers)),
         pad_double("Pull.Requests", fmt(prs), "Lines.of.Code", f"~{fmt(total_loc)}"),
+        pad_activity("Activity.(14d)", sparkline),
     ]
 
     def generate_svg(theme):
