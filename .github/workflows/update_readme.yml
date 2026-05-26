@@ -1,0 +1,36 @@
+name: Update README
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Run daily at midnight
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+          
+      - name: Update README.md
+        env:
+          # Use your PAT or the default GITHUB_TOKEN
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: python .github/scripts/update_readme.py
+        
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git commit -m 'chore: dynamically update README stats' || echo "No changes to commit"
+          git push
