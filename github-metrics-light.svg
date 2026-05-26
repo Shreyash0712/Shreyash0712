@@ -1,32 +1,33 @@
-<svg width="620" height="520" viewBox="0 0 620 520" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" viewBox="0 0 620 460" xmlns="http://www.w3.org/2000/svg">
 <style>
-  .text { font-family: "Courier New", Courier, monospace; font-size: 14px; fill: #24292f; }
+  .text { font-family: "Courier New", Courier, monospace; font-size: 14px; }
+  .label { fill: #0969da; font-weight: bold; }
+  .dots { fill: #d0d7de; }
+  .value { fill: #24292f; }
+  .header { fill: #1a7f37; font-weight: bold; }
 </style>
-<rect width="620" height="520" fill="#ffffff" rx="10" />
+<rect width="100%" height="100%" fill="#ffffff" rx="10" />
 <g class="text">
-<text x="20" y="30" xml:space="preserve">shreyash@swami -----------------------------------------------------</text>
-<text x="20" y="50" xml:space="preserve">. OS: ................................... Windows 11, Linux (Fedora)</text>
-<text x="20" y="70" xml:space="preserve">. Uptime: .............................. 21 years, 5 months, 19 days</text>
-<text x="20" y="90" xml:space="preserve">. Host: ............................................... Homo Sapiens</text>
-<text x="20" y="110" xml:space="preserve">. Kernel: ................................... Software Engineer v1.0</text>
-<text x="20" y="130" xml:space="preserve">. IDE: ............................... VSCode, Antigravity, IntelliJ</text>
-<text x="20" y="150" xml:space="preserve">.</text>
-<text x="20" y="170" xml:space="preserve">. Languages.Programming: .................. JavaScript, Java, Python</text>
-<text x="20" y="190" xml:space="preserve">. Languages.Real: ................................... English, Hindi</text>
-<text x="20" y="210" xml:space="preserve">.</text>
-<text x="20" y="230" xml:space="preserve">. Hobbies.Software: ............................. Web Dev, AI, Cloud</text>
-<text x="20" y="250" xml:space="preserve">. Hobbies.Hardware: .......................... Custom PCs, Keyboards</text>
-<text x="20" y="270" xml:space="preserve">.</text>
-<text x="20" y="290" xml:space="preserve">- Contact ----------------------------------------------------------</text>
-<text x="20" y="310" xml:space="preserve">. Email: .............................. shreyash.swami2476@gmail.com</text>
-<text x="20" y="330" xml:space="preserve">. LinkedIn: .......................................... shreyashswami</text>
-<text x="20" y="350" xml:space="preserve">.</text>
-<text x="20" y="370" xml:space="preserve">- GitHub Stats -----------------------------------------------------</text>
-<text x="20" y="390" xml:space="preserve">. Repos: ....... 28 [Contrib: 5] | Stars: ........................ 1</text>
-<text x="20" y="410" xml:space="preserve">. Commits: ................. 103 | Followers: .................... 6</text>
-<text x="20" y="430" xml:space="preserve">. Pull Requests: ............. 2 | Lines of Code: .......... ~19,839</text>
-<text x="20" y="450" xml:space="preserve">.</text>
-<text x="20" y="470" xml:space="preserve">- Date -------------------------------------------------------------</text>
-<text x="20" y="490" xml:space="preserve">. Current Date: ....................................... May 26, 2026</text>
+<text x="20" y="30" xml:space="preserve">&lt;tspan class="header"&gt;shreyash@swami -------------------------------------- (May 26, 2026)&lt;/tspan&gt;</text>
+<text x="20" y="50" xml:space="preserve">&lt;tspan class="dots"&gt;. &lt;/tspan&gt;&lt;tspan class="label"&gt;OS: &lt;/tspan&gt;&lt;tspan class="dots"&gt;...................................&lt;/tspan&gt;&lt;tspan class="value"&gt; Windows 11, Linux (Fedora)&lt;/tspan&gt;</text>
+<text x="20" y="70" xml:space="preserve">&lt;tspan class="dots"&gt;. &lt;/tspan&gt;&lt;tspan class="label"&gt;Uptime: &lt;/tspan&gt;&lt;tspan class="dots"&gt;..............................&lt;/tspan&gt;&lt;tspan class="value"&gt; 21 years, 5 months, 19 days&lt;/tspan&gt;</text>
+<text x="20" y="90" xml:space="preserve">&lt;tspan class="dots"&gt;. &lt;/tspan&gt;&lt;tspan class="label"&gt;IDE: &lt;/tspan&gt;&lt;tspan class="dots"&gt;...............................&lt;/tspan&gt;&lt;tspan class="value"&gt; VSCode, Antigravity, IntelliJ&lt;/tspan&gt;</text>
+<text x="20" y="110" xml:space="preserve">&lt;tspan class="dots"&gt;.&lt;/tspan&gt;</text>
+<text x="20" y="130" xml:space="preserve">&lt;tspan class="dots"&gt;. &lt;/tspan&gt;&lt;tspan class="label"&gt;Working on: &lt;/tspan&gt;&lt;tspan class="dots"&gt;............................&lt;/tspan&gt;&lt;tspan class="value"&gt; Shreyash0712/Shreyash0712&lt;/tspan&gt;</text>
+<text x="20" y="150" xml:space="preserve">&lt;tspan class="dots"&gt;.&lt;/tspan&gt;</text>
+<text x="20" y="170" xml:space="preserve">&lt;tspan class="dots"&gt;. &lt;/tspan&gt;&lt;tspan class="label"&gt;Languages.Programming: &lt;/tspan&gt;&lt;tspan class="dots"&gt;..................&lt;/tspan&gt;&lt;tspan class="value"&gt; JavaScript, Java, Python&lt;/tspan&gt;</text>
+<text x="20" y="190" xml:space="preserve">&lt;tspan class="dots"&gt;. &lt;/tspan&gt;&lt;tspan class="label"&gt;Languages.Real: &lt;/tspan&gt;&lt;tspan class="dots"&gt;...................................&lt;/tspan&gt;&lt;tspan class="value"&gt; English, Hindi&lt;/tspan&gt;</text>
+<text x="20" y="210" xml:space="preserve">&lt;tspan class="dots"&gt;.&lt;/tspan&gt;</text>
+<text x="20" y="230" xml:space="preserve">&lt;tspan class="dots"&gt;. &lt;/tspan&gt;&lt;tspan class="label"&gt;Hobbies.Software: &lt;/tspan&gt;&lt;tspan class="dots"&gt;.............................&lt;/tspan&gt;&lt;tspan class="value"&gt; Web Dev, AI, Cloud&lt;/tspan&gt;</text>
+<text x="20" y="250" xml:space="preserve">&lt;tspan class="dots"&gt;. &lt;/tspan&gt;&lt;tspan class="label"&gt;Hobbies.Hardware: &lt;/tspan&gt;&lt;tspan class="dots"&gt;..........................&lt;/tspan&gt;&lt;tspan class="value"&gt; Custom PCs, Keyboards&lt;/tspan&gt;</text>
+<text x="20" y="270" xml:space="preserve">&lt;tspan class="dots"&gt;.&lt;/tspan&gt;</text>
+<text x="20" y="290" xml:space="preserve">&lt;tspan class="header"&gt;- Contact ----------------------------------------------------------&lt;/tspan&gt;</text>
+<text x="20" y="310" xml:space="preserve">&lt;tspan class="dots"&gt;. &lt;/tspan&gt;&lt;tspan class="label"&gt;Email: &lt;/tspan&gt;&lt;tspan class="dots"&gt;..............................&lt;/tspan&gt;&lt;tspan class="value"&gt; shreyash.swami2476@gmail.com&lt;/tspan&gt;</text>
+<text x="20" y="330" xml:space="preserve">&lt;tspan class="dots"&gt;. &lt;/tspan&gt;&lt;tspan class="label"&gt;LinkedIn: &lt;/tspan&gt;&lt;tspan class="dots"&gt;..........................................&lt;/tspan&gt;&lt;tspan class="value"&gt; shreyashswami&lt;/tspan&gt;</text>
+<text x="20" y="350" xml:space="preserve">&lt;tspan class="dots"&gt;.&lt;/tspan&gt;</text>
+<text x="20" y="370" xml:space="preserve">&lt;tspan class="header"&gt;- GitHub Stats -----------------------------------------------------&lt;/tspan&gt;</text>
+<text x="20" y="390" xml:space="preserve">&lt;tspan class="dots"&gt;. &lt;/tspan&gt;&lt;tspan class="label"&gt;Repos: &lt;/tspan&gt;&lt;tspan class="dots"&gt;.......&lt;/tspan&gt;&lt;tspan class="value"&gt; 28 [Contrib: 5]&lt;/tspan&gt;&lt;tspan class="dots"&gt; | &lt;/tspan&gt;&lt;tspan class="label"&gt;Stars: &lt;/tspan&gt;&lt;tspan class="dots"&gt;........................&lt;/tspan&gt;&lt;tspan class="value"&gt; 1&lt;/tspan&gt;</text>
+<text x="20" y="410" xml:space="preserve">&lt;tspan class="dots"&gt;. &lt;/tspan&gt;&lt;tspan class="label"&gt;Commits: &lt;/tspan&gt;&lt;tspan class="dots"&gt;.................&lt;/tspan&gt;&lt;tspan class="value"&gt; 104&lt;/tspan&gt;&lt;tspan class="dots"&gt; | &lt;/tspan&gt;&lt;tspan class="label"&gt;Followers: &lt;/tspan&gt;&lt;tspan class="dots"&gt;....................&lt;/tspan&gt;&lt;tspan class="value"&gt; 6&lt;/tspan&gt;</text>
+<text x="20" y="430" xml:space="preserve">&lt;tspan class="dots"&gt;. &lt;/tspan&gt;&lt;tspan class="label"&gt;Pull Requests: &lt;/tspan&gt;&lt;tspan class="dots"&gt;.............&lt;/tspan&gt;&lt;tspan class="value"&gt; 2&lt;/tspan&gt;&lt;tspan class="dots"&gt; | &lt;/tspan&gt;&lt;tspan class="label"&gt;Lines of Code: &lt;/tspan&gt;&lt;tspan class="dots"&gt;..........&lt;/tspan&gt;&lt;tspan class="value"&gt; ~19,839&lt;/tspan&gt;</text>
 </g>
 </svg>
