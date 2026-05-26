@@ -1,10 +1,11 @@
-<svg width="100%" viewBox="0 0 650 508" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" viewBox="0 0 650 598" xmlns="http://www.w3.org/2000/svg">
 <style>
   .text { font-family: "Courier New", Courier, monospace; font-size: 12px; }
   .label { fill: #58a6ff; font-weight: bold; }
   .dots { fill: #484f58; }
   .value { fill: #c9d1d9; }
   .header { fill: #3fb950; font-weight: bold; }
+  .muted { fill: #8b949e; }
 </style>
 <rect width="100%" height="100%" fill="#0d1117" rx="10" />
 <g class="text">
@@ -28,11 +29,16 @@
 <text x="20" y="336" xml:space="preserve"><tspan class="dots">.</tspan></text>
 <text x="20" y="354" xml:space="preserve"><tspan class="header">- GitHub-Stats -------------------------------------------------------------------</tspan></text>
 <text x="20" y="372" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Repos: </tspan><tspan class="dots">..............</tspan><tspan class="value"> 28 [Contrib: 5]</tspan><tspan class="dots"> | </tspan><tspan class="label">Stars: </tspan><tspan class="dots">...............................</tspan><tspan class="value"> 1</tspan></text>
-<text x="20" y="390" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Commits: </tspan><tspan class="dots">........................</tspan><tspan class="value"> 115</tspan><tspan class="dots"> | </tspan><tspan class="label">Followers: </tspan><tspan class="dots">...........................</tspan><tspan class="value"> 6</tspan></text>
+<text x="20" y="390" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Commits: </tspan><tspan class="dots">........................</tspan><tspan class="value"> 116</tspan><tspan class="dots"> | </tspan><tspan class="label">Followers: </tspan><tspan class="dots">...........................</tspan><tspan class="value"> 6</tspan></text>
 <text x="20" y="408" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pull.Requests: </tspan><tspan class="dots">....................</tspan><tspan class="value"> 2</tspan><tspan class="dots"> | </tspan><tspan class="label">Lines.of.Code: </tspan><tspan class="dots">.................</tspan><tspan class="value"> ~19,839</tspan></text>
 <text x="20" y="426" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Activity.(14d): </tspan><tspan class="dots">............................................... [</tspan><tspan class="header">            ▃█</tspan><tspan class="dots">]</tspan></text>
 <text x="20" y="444" xml:space="preserve"><tspan class="dots">.</tspan></text>
 <text x="20" y="462" xml:space="preserve"><tspan class="header">- Today.(Last.24h) ---------------------------------------------------------------</tspan></text>
-<text x="20" y="480" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pushed: </tspan><tspan class="dots">.................................</tspan><tspan class="value"> 18 commits to collab-fun, Shreyash0712</tspan></text>
+<text x="20" y="480" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pushed: </tspan><tspan class="dots">.................................</tspan><tspan class="value"> 19 commits to Shreyash0712, collab-fun</tspan></text>
+<text x="20" y="498" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [3466149] Pushed 1 commit(s) - Shreyash0712 @ 13:18 IST</tspan></text>
+<text x="20" y="516" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [3466122] Pushed 1 commit(s) - Shreyash0712 @ 13:12 IST</tspan></text>
+<text x="20" y="534" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [3466083] Pushed 1 commit(s) - Shreyash0712 @ 13:02 IST</tspan></text>
+<text x="20" y="552" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [3465687] Pushed 1 commit(s) - Shreyash0712 @ 11:09 IST</tspan></text>
+<text x="20" y="570" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [3465657] Pushed 1 commit(s) - Shreyash0712 @ 10:59 IST</tspan></text>
 </g>
 </svg>
