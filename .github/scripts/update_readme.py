@@ -32,7 +32,18 @@ def main():
     followers = user_data.get("followers", 0)
     public_repos = user_data.get("public_repos", 0)
     
-    # 2. Repos (for stars and LOC)
+    # 2. Working On (Latest PushEvent)
+    working_on = "N/A"
+    try:
+        events = fetch_json(f"https://api.github.com/users/{username}/events/public", token)
+        for event in events:
+            if event.get("type") == "PushEvent":
+                working_on = event["repo"]["name"]
+                break
+    except Exception:
+        pass
+    
+    # 3. Repos (for stars and LOC)
     repos = fetch_json(f"https://api.github.com/users/{username}/repos?per_page=100", token)
     stars = sum(repo.get("stargazers_count", 0) for repo in repos)
     
@@ -93,73 +104,90 @@ def main():
     def fmt(n):
         return f"{n:,}" if isinstance(n, int) else str(n)
 
-    # 5. Format Lines Dynamically
+    # 6. Format Lines Dynamically
     TOTAL_WIDTH = 68
+
+    def esc(s):
+        return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
     def pad_line(label, value):
         left = f". {label}: "
         right = f" {value}"
         dots = "." * max(1, (TOTAL_WIDTH - len(left) - len(right)))
-        return f"{left}{dots}{right}"
+        return f'<tspan class="dots">. </tspan><tspan class="label">{esc(label)}: </tspan><tspan class="dots">{dots}</tspan><tspan class="value">{esc(right)}</tspan>'
 
     def pad_double(label1, val1, label2, val2):
         half = (TOTAL_WIDTH - 3) // 2
         left1 = f". {label1}: "
         right1 = f" {val1}"
         dots1 = "." * max(1, half - len(left1) - len(right1))
-        p1 = f"{left1}{dots1}{right1}"
+        
+        t_p1 = f'<tspan class="dots">. </tspan><tspan class="label">{esc(label1)}: </tspan><tspan class="dots">{dots1}</tspan><tspan class="value">{esc(right1)}</tspan>'
+        len_p1 = len(left1) + len(dots1) + len(right1)
         
         left2 = f"{label2}: "
         right2 = f" {val2}"
-        rem = TOTAL_WIDTH - len(p1) - 3
+        rem = TOTAL_WIDTH - len_p1 - 3
         dots2 = "." * max(1, rem - len(left2) - len(right2))
-        p2 = f"{left2}{dots2}{right2}"
-        return f"{p1} | {p2}"
+        
+        t_p2 = f'<tspan class="label">{esc(label2)}: </tspan><tspan class="dots">{dots2}</tspan><tspan class="value">{esc(right2)}</tspan>'
+        
+        return f'{t_p1}<tspan class="dots"> | </tspan>{t_p2}'
 
     def make_header(title):
         base = f"- {title} "
-        return base + "-" * max(1, TOTAL_WIDTH - len(base))
+        dashes = "-" * max(1, TOTAL_WIDTH - len(base))
+        return f'<tspan class="header">{esc(base)}{dashes}</tspan>'
+        
+    def make_top_header(title, right_text):
+        base = f"{title} "
+        right = f" ({right_text})"
+        dashes = "-" * max(1, (TOTAL_WIDTH - len(base) - len(right)))
+        return f'<tspan class="header">{esc(base)}{dashes}{esc(right)}</tspan>'
 
     lines = [
-        f"shreyash@swami " + "-" * (TOTAL_WIDTH - 15),
+        make_top_header("shreyash@swami", current_date_str),
         pad_line("OS", "Windows 11, Linux (Fedora)"),
         pad_line("Uptime", uptime_str),
-        pad_line("Host", "Homo Sapiens"),
-        pad_line("Kernel", "Software Engineer v1.0"),
         pad_line("IDE", "VSCode, Antigravity, IntelliJ"),
-        ".",
+        '<tspan class="dots">.</tspan>',
+        pad_line("Working on", working_on),
+        '<tspan class="dots">.</tspan>',
         pad_line("Languages.Programming", "JavaScript, Java, Python"),
         pad_line("Languages.Real", "English, Hindi"),
-        ".",
+        '<tspan class="dots">.</tspan>',
         pad_line("Hobbies.Software", "Web Dev, AI, Cloud"),
         pad_line("Hobbies.Hardware", "Custom PCs, Keyboards"),
-        ".",
+        '<tspan class="dots">.</tspan>',
         make_header("Contact"),
         pad_line("Email", "shreyash.swami2476@gmail.com"),
         pad_line("LinkedIn", "shreyashswami"),
-        ".",
+        '<tspan class="dots">.</tspan>',
         make_header("GitHub Stats"),
         pad_double("Repos", f"{fmt(public_repos)} [Contrib: {fmt(contrib)}]", "Stars", fmt(stars)),
         pad_double("Commits", fmt(commits), "Followers", fmt(followers)),
         pad_double("Pull Requests", fmt(prs), "Lines of Code", f"~{fmt(total_loc)}"),
-        ".",
-        make_header("Date"),
-        pad_line("Current Date", current_date_str),
     ]
 
     def generate_svg(theme):
         bg_color = "#0d1117" if theme == "dark" else "#ffffff"
-        text_color = "#c9d1d9" if theme == "dark" else "#24292f"
+        label_color = "#58a6ff" if theme == "dark" else "#0969da"
+        dots_color = "#484f58" if theme == "dark" else "#d0d7de"
+        value_color = "#c9d1d9" if theme == "dark" else "#24292f"
+        header_color = "#3fb950" if theme == "dark" else "#1a7f37"
         
-        width = 620
         height = 20 * len(lines) + 40
         
         svg = [
-            f'<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" xmlns="http://www.w3.org/2000/svg">',
+            f'<svg width="100%" viewBox="0 0 620 {height}" xmlns="http://www.w3.org/2000/svg">',
             f'<style>',
-            f'  .text {{ font-family: "Courier New", Courier, monospace; font-size: 14px; fill: {text_color}; }}',
+            f'  .text {{ font-family: "Courier New", Courier, monospace; font-size: 14px; }}',
+            f'  .label {{ fill: {label_color}; font-weight: bold; }}',
+            f'  .dots {{ fill: {dots_color}; }}',
+            f'  .value {{ fill: {value_color}; }}',
+            f'  .header {{ fill: {header_color}; font-weight: bold; }}',
             f'</style>',
-            f'<rect width="{width}" height="{height}" fill="{bg_color}" rx="10" />',
+            f'<rect width="100%" height="100%" fill="{bg_color}" rx="10" />',
             f'<g class="text">'
         ]
         

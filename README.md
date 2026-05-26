@@ -1,4 +1,3 @@
-# Shreyash Swami
 > **Open For Work**
 
 - **Currently working on:** [Collab-Fun](https://github.com/Shreyash0712/collab-fun) | [Live Link](https://collabfun.qzz.io/)
