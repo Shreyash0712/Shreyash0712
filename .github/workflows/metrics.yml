@@ -13,7 +13,7 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: Shreyash0712
-          template: classic
+          template: terminal
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Kolkata
           plugin_lines: yes
