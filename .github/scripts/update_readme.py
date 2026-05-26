@@ -1,7 +1,7 @@
 import os
 import urllib.request
 import json
-from datetime import date
+from datetime import date, datetime, timezone, timedelta
 import re
 
 def fetch_json(url, token):
@@ -34,6 +34,7 @@ def main():
     
     # 2. Working On (Latest PushEvent)
     working_on = "N/A"
+    events = []
     try:
         events = fetch_json(f"https://api.github.com/users/{username}/events/public", token)
         for event in events:
@@ -42,6 +43,35 @@ def main():
                 if repo_full_name != f"{username}/{username}":
                     working_on = repo_full_name.split("/")[-1]
                     break
+    except Exception:
+        pass
+        
+    today_commits = 0
+    today_repos = set()
+    today_prs = 0
+    today_issues = 0
+    today_stars = 0
+    
+    try:
+        now = datetime.now(timezone.utc)
+        one_day_ago = now - timedelta(days=1)
+        for event in events:
+            event_time = datetime.strptime(event["created_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+            if event_time < one_day_ago:
+                continue
+                
+            etype = event.get("type")
+            repo_name = event["repo"]["name"]
+            
+            if etype == "PushEvent":
+                today_commits += len(event["payload"].get("commits", []))
+                today_repos.add(repo_name.split("/")[-1])
+            elif etype == "PullRequestEvent" and event["payload"].get("action") in ["opened", "closed"]:
+                today_prs += 1
+            elif etype == "IssuesEvent" and event["payload"].get("action") in ["opened", "closed"]:
+                today_issues += 1
+            elif etype == "WatchEvent" and event["payload"].get("action") == "started":
+                today_stars += 1
     except Exception:
         pass
     
@@ -203,6 +233,25 @@ def main():
         pad_double("Pull.Requests", fmt(prs), "Lines.of.Code", f"~{fmt(total_loc)}"),
         pad_activity("Activity.(14d)", sparkline),
     ]
+    
+    if any([today_commits, today_prs, today_issues, today_stars]):
+        lines.append('<tspan class="dots">.</tspan>')
+        lines.append(make_header("Today.(Last.24h)"))
+        
+        if today_commits > 0:
+            repos_str = ", ".join(today_repos)
+            if len(repos_str) > 40:
+                repos_str = f"{len(today_repos)} repositories"
+            lines.append(pad_line("Pushed", f"{today_commits} commits to {repos_str}"))
+            
+        if today_prs > 0:
+            lines.append(pad_line("Pull.Requests", f"Worked on {today_prs} PR(s)"))
+            
+        if today_issues > 0:
+            lines.append(pad_line("Issues", f"Worked on {today_issues} issue(s)"))
+            
+        if today_stars > 0:
+            lines.append(pad_line("Starred", f"{today_stars} repo(s)"))
 
     def generate_svg(theme):
         bg_color = "#0d1117" if theme == "dark" else "#ffffff"
