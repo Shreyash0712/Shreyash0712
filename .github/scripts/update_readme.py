@@ -51,7 +51,18 @@ def main():
     today_prs = 0
     today_issues = 0
     today_stars = 0
+    today_forks = 0
+    today_releases = 0
+    today_comments = 0
+    today_reviews = 0
     recent_activity = []
+    recent_prs = []
+    recent_issues = []
+    recent_stars = []
+    recent_forks = []
+    recent_releases = []
+    recent_comments = []
+    recent_reviews = []
     
     try:
         now = datetime.now(timezone.utc)
@@ -92,10 +103,57 @@ def main():
                     recent_activity.append((push_id, msg, r_name, time_str))
             elif etype == "PullRequestEvent" and event["payload"].get("action") in ["opened", "closed"]:
                 today_prs += 1
+                r_name = repo_name.split("/")[-1]
+                ist_time = event_time + timedelta(hours=5, minutes=30)
+                time_str = ist_time.strftime("%H:%M IST")
+                action = event["payload"]["action"].capitalize()
+                pr = event["payload"].get("pull_request", {})
+                pr_num = f"#{pr.get('number', '?')}"
+                pr_title = pr.get("title", "Pull Request").split("\n")[0]
+                recent_prs.append((action, pr_num, pr_title, r_name, time_str))
             elif etype == "IssuesEvent" and event["payload"].get("action") in ["opened", "closed"]:
                 today_issues += 1
+                r_name = repo_name.split("/")[-1]
+                ist_time = event_time + timedelta(hours=5, minutes=30)
+                time_str = ist_time.strftime("%H:%M IST")
+                action = event["payload"]["action"].capitalize()
+                issue = event["payload"].get("issue", {})
+                issue_num = f"#{issue.get('number', '?')}"
+                issue_title = issue.get("title", "Issue").split("\n")[0]
+                recent_issues.append((action, issue_num, issue_title, r_name, time_str))
             elif etype == "WatchEvent" and event["payload"].get("action") == "started":
                 today_stars += 1
+                r_name = repo_name.split("/")[-1]
+                ist_time = event_time + timedelta(hours=5, minutes=30)
+                time_str = ist_time.strftime("%H:%M IST")
+                recent_stars.append((r_name, time_str))
+            elif etype == "ForkEvent":
+                today_forks += 1
+                r_name = repo_name.split("/")[-1]
+                ist_time = event_time + timedelta(hours=5, minutes=30)
+                time_str = ist_time.strftime("%H:%M IST")
+                recent_forks.append((r_name, time_str))
+            elif etype == "ReleaseEvent" and event["payload"].get("action") == "published":
+                today_releases += 1
+                r_name = repo_name.split("/")[-1]
+                ist_time = event_time + timedelta(hours=5, minutes=30)
+                time_str = ist_time.strftime("%H:%M IST")
+                release = event["payload"].get("release", {})
+                tag = release.get("tag_name", "Release")
+                recent_releases.append((tag, r_name, time_str))
+            elif etype in ["IssueCommentEvent", "CommitCommentEvent", "PullRequestReviewCommentEvent"]:
+                today_comments += 1
+                r_name = repo_name.split("/")[-1]
+                ist_time = event_time + timedelta(hours=5, minutes=30)
+                time_str = ist_time.strftime("%H:%M IST")
+                recent_comments.append((r_name, time_str))
+            elif etype == "PullRequestReviewEvent":
+                today_reviews += 1
+                r_name = repo_name.split("/")[-1]
+                ist_time = event_time + timedelta(hours=5, minutes=30)
+                time_str = ist_time.strftime("%H:%M IST")
+                state = event["payload"].get("review", {}).get("state", "reviewed").capitalize()
+                recent_reviews.append((state, r_name, time_str))
     except Exception:
         pass
     
@@ -149,14 +207,15 @@ def main():
         last_14_days = days[-14:]
         counts = [day["contributionCount"] for day in last_14_days]
         
-        ticks = ['•', '▂', '▃', '▄', '▅', '▆', '▇', '█']
+        ticks = ['▂', '▃', '▄', '▅', '▆', '▇']
         max_val = max(counts) if counts else 0
         sparkline = ""
         for count in counts:
             if max_val == 0:
                 sparkline += ticks[0]
             else:
-                idx = max(0, min(7, int((count / max_val) * 7)))
+                last = len(ticks) - 1
+                idx = max(0, min(last, int((count / max_val) * last)))
                 if count == 0:
                     idx = 0
                 sparkline += ticks[idx]
@@ -260,7 +319,7 @@ def main():
         pad_activity("Activity.(14d)", sparkline),
     ]
     
-    if any([today_commits, today_prs, today_issues, today_stars]):
+    if any([today_commits, today_prs, today_issues, today_stars, today_forks, today_releases, today_comments, today_reviews]):
         lines.append('<tspan class="dots">.</tspan>')
         lines.append(make_header("Today.(Last.24h)"))
         
@@ -286,11 +345,110 @@ def main():
         if today_prs > 0:
             lines.append(pad_line("Pull.Requests", f"Worked on {today_prs} PR(s)"))
             
+            for action, pr_num, pr_title, repo, tstr in recent_prs:
+                right_part = f" {repo} @ {tstr}"
+                prefix = f".    > [{action}] {pr_num} "
+                avail_msg = TOTAL_WIDTH - len(prefix) - len(right_part) - 3
+                
+                title = pr_title
+                if len(title) > avail_msg:
+                    title = title[:max(0, avail_msg)]
+                
+                left_for_calc = f"{prefix}{title} "
+                dots = "." * max(1, TOTAL_WIDTH - len(left_for_calc) - len(right_part))
+                
+                rendered_left = f"   > [{action}] {pr_num} {title} "
+                lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(rendered_left)}</tspan><tspan class="dots">{dots}</tspan><tspan class="muted">{esc(right_part)}</tspan>')
+            
         if today_issues > 0:
             lines.append(pad_line("Issues", f"Worked on {today_issues} issue(s)"))
             
+            for action, issue_num, issue_title, repo, tstr in recent_issues:
+                right_part = f" {repo} @ {tstr}"
+                prefix = f".    > [{action}] {issue_num} "
+                avail_msg = TOTAL_WIDTH - len(prefix) - len(right_part) - 3
+                
+                title = issue_title
+                if len(title) > avail_msg:
+                    title = title[:max(0, avail_msg)]
+                
+                left_for_calc = f"{prefix}{title} "
+                dots = "." * max(1, TOTAL_WIDTH - len(left_for_calc) - len(right_part))
+                
+                rendered_left = f"   > [{action}] {issue_num} {title} "
+                lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(rendered_left)}</tspan><tspan class="dots">{dots}</tspan><tspan class="muted">{esc(right_part)}</tspan>')
+            
         if today_stars > 0:
             lines.append(pad_line("Starred", f"{today_stars} repo(s)"))
+            
+            for repo, tstr in recent_stars:
+                right_part = f" @ {tstr}"
+                prefix = f".    > "
+                
+                left_for_calc = f"{prefix}{repo} "
+                dots = "." * max(1, TOTAL_WIDTH - len(left_for_calc) - len(right_part))
+                
+                rendered_left = f"   > {repo} "
+                lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(rendered_left)}</tspan><tspan class="dots">{dots}</tspan><tspan class="muted">{esc(right_part)}</tspan>')
+                
+        if today_forks > 0:
+            lines.append(pad_line("Forked", f"{today_forks} repo(s)"))
+            
+            for repo, tstr in recent_forks:
+                right_part = f" @ {tstr}"
+                prefix = f".    > "
+                
+                left_for_calc = f"{prefix}{repo} "
+                dots = "." * max(1, TOTAL_WIDTH - len(left_for_calc) - len(right_part))
+                
+                rendered_left = f"   > {repo} "
+                lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(rendered_left)}</tspan><tspan class="dots">{dots}</tspan><tspan class="muted">{esc(right_part)}</tspan>')
+                
+        if today_releases > 0:
+            lines.append(pad_line("Releases", f"Published {today_releases} release(s)"))
+            
+            for tag, repo, tstr in recent_releases:
+                right_part = f" {repo} @ {tstr}"
+                prefix = f".    > "
+                avail_msg = TOTAL_WIDTH - len(prefix) - len(right_part) - 3
+                
+                title = tag
+                if len(title) > avail_msg:
+                    title = title[:max(0, avail_msg)]
+                
+                left_for_calc = f"{prefix}{title} "
+                dots = "." * max(1, TOTAL_WIDTH - len(left_for_calc) - len(right_part))
+                
+                rendered_left = f"   > {title} "
+                lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(rendered_left)}</tspan><tspan class="dots">{dots}</tspan><tspan class="muted">{esc(right_part)}</tspan>')
+
+        if today_reviews > 0:
+            lines.append(pad_line("Reviewed", f"{today_reviews} PR(s)"))
+            
+            for state, repo, tstr in recent_reviews:
+                right_part = f" {repo} @ {tstr}"
+                prefix = f".    > "
+                title = f"[{state}] PR"
+                
+                left_for_calc = f"{prefix}{title} "
+                dots = "." * max(1, TOTAL_WIDTH - len(left_for_calc) - len(right_part))
+                
+                rendered_left = f"   > {title} "
+                lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(rendered_left)}</tspan><tspan class="dots">{dots}</tspan><tspan class="muted">{esc(right_part)}</tspan>')
+
+        if today_comments > 0:
+            lines.append(pad_line("Comments", f"Made {today_comments} comment(s)"))
+            
+            for repo, tstr in recent_comments:
+                right_part = f" {repo} @ {tstr}"
+                prefix = f".    > "
+                title = f"Commented"
+                
+                left_for_calc = f"{prefix}{title} "
+                dots = "." * max(1, TOTAL_WIDTH - len(left_for_calc) - len(right_part))
+                
+                rendered_left = f"   > {title} "
+                lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(rendered_left)}</tspan><tspan class="dots">{dots}</tspan><tspan class="muted">{esc(right_part)}</tspan>')
 
     def generate_svg(theme):
         bg_color = "#0d1117" if theme == "dark" else "#ffffff"
