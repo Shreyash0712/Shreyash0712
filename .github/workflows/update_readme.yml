@@ -31,6 +31,6 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add README.md
-          git commit -m 'chore: dynamically update README stats' || echo "No changes to commit"
+          git add README.md github-metrics-dark.svg github-metrics-light.svg
+          git commit -m 'chore: dynamically update README stats and SVG' || echo "No changes to commit"
           git push

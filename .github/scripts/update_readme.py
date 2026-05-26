@@ -1,8 +1,8 @@
 import os
 import urllib.request
 import json
-import time
 from datetime import date
+import re
 
 def fetch_json(url, token):
     req = urllib.request.Request(url)
@@ -90,23 +90,99 @@ def main():
     uptime_str = f"{years} years, {months} months, {days} days"
     current_date_str = today.strftime("%B %d, %Y")
 
-    with open("README.template.md", "r") as f:
-        template = f.read()
-
     def fmt(n):
         return f"{n:,}" if isinstance(n, int) else str(n)
 
-    # Format into template
-    template = template.replace("{repos}", f"{fmt(public_repos):<3}")
-    template = template.replace("{contrib}", f"{fmt(contrib):<3}")
-    template = template.replace("{stars}", f"{fmt(stars):>5}")
-    template = template.replace("{commits}", f"{fmt(commits):>6}")
-    template = template.replace("{followers}", f"{fmt(followers):>5}")
-    template = template.replace("{prs}", f"{fmt(prs):>6}")
-    template = template.replace("{loc}", f"~{fmt(total_loc):>5}")
-    template = template.replace("{uptime}", uptime_str)
-    template = template.replace("{current_date}", current_date_str)
+    # 5. Format Lines Dynamically
+    TOTAL_WIDTH = 68
 
+    def pad_line(label, value):
+        left = f". {label}: "
+        right = f" {value}"
+        dots = "." * max(1, (TOTAL_WIDTH - len(left) - len(right)))
+        return f"{left}{dots}{right}"
+
+    def pad_double(label1, val1, label2, val2):
+        half = (TOTAL_WIDTH - 3) // 2
+        left1 = f". {label1}: "
+        right1 = f" {val1}"
+        dots1 = "." * max(1, half - len(left1) - len(right1))
+        p1 = f"{left1}{dots1}{right1}"
+        
+        left2 = f"{label2}: "
+        right2 = f" {val2}"
+        rem = TOTAL_WIDTH - len(p1) - 3
+        dots2 = "." * max(1, rem - len(left2) - len(right2))
+        p2 = f"{left2}{dots2}{right2}"
+        return f"{p1} | {p2}"
+
+    def make_header(title):
+        base = f"- {title} "
+        return base + "-" * max(1, TOTAL_WIDTH - len(base))
+
+    lines = [
+        f"shreyash@swami " + "-" * (TOTAL_WIDTH - 15),
+        pad_line("OS", "Windows 11, Linux (Fedora)"),
+        pad_line("Uptime", uptime_str),
+        pad_line("Host", "Homo Sapiens"),
+        pad_line("Kernel", "Software Engineer v1.0"),
+        pad_line("IDE", "VSCode, Antigravity, IntelliJ"),
+        ".",
+        pad_line("Languages.Programming", "JavaScript, Java, Python"),
+        pad_line("Languages.Real", "English, Hindi"),
+        ".",
+        pad_line("Hobbies.Software", "Web Dev, AI, Cloud"),
+        pad_line("Hobbies.Hardware", "Custom PCs, Keyboards"),
+        ".",
+        make_header("Contact"),
+        pad_line("Email", "shreyash.swami2476@gmail.com"),
+        pad_line("LinkedIn", "shreyashswami"),
+        ".",
+        make_header("GitHub Stats"),
+        pad_double("Repos", f"{fmt(public_repos)} [Contrib: {fmt(contrib)}]", "Stars", fmt(stars)),
+        pad_double("Commits", fmt(commits), "Followers", fmt(followers)),
+        pad_double("Pull Requests", fmt(prs), "Lines of Code", f"~{fmt(total_loc)}"),
+        ".",
+        make_header("Date"),
+        pad_line("Current Date", current_date_str),
+    ]
+
+    def generate_svg(theme):
+        bg_color = "#0d1117" if theme == "dark" else "#ffffff"
+        text_color = "#c9d1d9" if theme == "dark" else "#24292f"
+        
+        width = 620
+        height = 20 * len(lines) + 40
+        
+        svg = [
+            f'<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" xmlns="http://www.w3.org/2000/svg">',
+            f'<style>',
+            f'  .text {{ font-family: "Courier New", Courier, monospace; font-size: 14px; fill: {text_color}; }}',
+            f'</style>',
+            f'<rect width="{width}" height="{height}" fill="{bg_color}" rx="10" />',
+            f'<g class="text">'
+        ]
+        
+        for i, line in enumerate(lines):
+            y = 30 + i * 20
+            line = line.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+            svg.append(f'<text x="20" y="{y}" xml:space="preserve">{line}</text>')
+            
+        svg.append('</g>')
+        svg.append('</svg>')
+        return "\n".join(svg)
+
+    # 6. Save SVGs
+    with open("github-metrics-dark.svg", "w") as f:
+        f.write(generate_svg("dark"))
+        
+    with open("github-metrics-light.svg", "w") as f:
+        f.write(generate_svg("light"))
+
+    # 7. Update README.md
+    with open("README.template.md", "r") as f:
+        template = f.read()
+        
     with open("README.md", "w") as f:
         f.write(template)
 
