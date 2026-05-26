@@ -105,7 +105,7 @@ def main():
         return f"{n:,}" if isinstance(n, int) else str(n)
 
     # 6. Format Lines Dynamically
-    TOTAL_WIDTH = 68
+    TOTAL_WIDTH = 82
 
     def esc(s):
         return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
@@ -176,12 +176,12 @@ def main():
         value_color = "#c9d1d9" if theme == "dark" else "#24292f"
         header_color = "#3fb950" if theme == "dark" else "#1a7f37"
         
-        height = 20 * len(lines) + 40
+        height = 18 * len(lines) + 40
         
         svg = [
-            f'<svg width="100%" viewBox="0 0 620 {height}" xmlns="http://www.w3.org/2000/svg">',
+            f'<svg width="100%" viewBox="0 0 650 {height}" xmlns="http://www.w3.org/2000/svg">',
             f'<style>',
-            f'  .text {{ font-family: "Courier New", Courier, monospace; font-size: 14px; }}',
+            f'  .text {{ font-family: "Courier New", Courier, monospace; font-size: 12px; }}',
             f'  .label {{ fill: {label_color}; font-weight: bold; }}',
             f'  .dots {{ fill: {dots_color}; }}',
             f'  .value {{ fill: {value_color}; }}',
@@ -192,8 +192,7 @@ def main():
         ]
         
         for i, line in enumerate(lines):
-            y = 30 + i * 20
-            line = line.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+            y = 30 + i * 18
             svg.append(f'<text x="20" y="{y}" xml:space="preserve">{line}</text>')
             
         svg.append('</g>')
