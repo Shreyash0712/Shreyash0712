@@ -1,7 +1,3 @@
-> **Open For Work**
-
----
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="github-metrics-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="github-metrics-light.svg">
