@@ -64,7 +64,7 @@ def main():
             repo_name = event["repo"]["name"]
             
             if etype == "PushEvent":
-                today_commits += len(event["payload"].get("commits", []))
+                today_commits += event["payload"].get("size", 1)
                 today_repos.add(repo_name.split("/")[-1])
             elif etype == "PullRequestEvent" and event["payload"].get("action") in ["opened", "closed"]:
                 today_prs += 1
