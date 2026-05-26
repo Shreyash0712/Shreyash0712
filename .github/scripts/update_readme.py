@@ -150,6 +150,7 @@ def main():
         pad_line("OS", "Windows 11, Linux (Fedora)"),
         pad_line("Uptime", uptime_str),
         pad_line("IDE", "VSCode, Antigravity, IntelliJ"),
+        pad_line("Status", "Open For Work"),
         '<tspan class="dots">.</tspan>',
         pad_line("Working on", working_on),
         '<tspan class="dots">.</tspan>',
@@ -157,7 +158,7 @@ def main():
         pad_line("Languages.Real", "English, Hindi"),
         '<tspan class="dots">.</tspan>',
         pad_line("Hobbies.Software", "Web Dev, AI, Cloud"),
-        pad_line("Hobbies.Hardware", "Custom PCs, Keyboards"),
+        pad_line("Hobbies.Hardware", "Table Tennis, Reading"),
         '<tspan class="dots">.</tspan>',
         make_header("Contact"),
         pad_line("Email", "shreyash.swami2476@gmail.com"),
@@ -207,11 +208,14 @@ def main():
         f.write(generate_svg("light"))
 
     # 7. Update README.md
-    with open("README.template.md", "r") as f:
-        template = f.read()
+    readme_content = """<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="github-metrics-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="github-metrics-light.svg">
+  <img alt="GitHub Metrics Console" src="github-metrics-dark.svg" width="100%">
+</picture>"""
         
     with open("README.md", "w") as f:
-        f.write(template)
+        f.write(readme_content)
 
 if __name__ == "__main__":
     main()
