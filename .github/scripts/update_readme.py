@@ -38,8 +38,10 @@ def main():
         events = fetch_json(f"https://api.github.com/users/{username}/events/public", token)
         for event in events:
             if event.get("type") == "PushEvent":
-                working_on = event["repo"]["name"]
-                break
+                repo_full_name = event["repo"]["name"]
+                if repo_full_name != f"{username}/{username}":
+                    working_on = repo_full_name.split("/")[-1]
+                    break
     except Exception:
         pass
     
@@ -162,7 +164,7 @@ def main():
         '<tspan class="dots">.</tspan>',
         make_header("Contact"),
         pad_line("Email", "shreyash.swami2476@gmail.com"),
-        pad_line("LinkedIn", "shreyashswami"),
+        pad_line("LinkedIn", "in/shreyashswami"),
         '<tspan class="dots">.</tspan>',
         make_header("GitHub Stats"),
         pad_double("Repos", f"{fmt(public_repos)} [Contrib: {fmt(contrib)}]", "Stars", fmt(stars)),
