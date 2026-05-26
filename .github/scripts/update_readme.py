@@ -270,10 +270,10 @@ def main():
             
             for sha, msg, repo, tstr in recent_activity:
                 right_part = f" {repo} @ {tstr}"
-                avail_msg = TOTAL_WIDTH - len(f".    > [{sha}] ") - len(right_part)
+                avail_msg = TOTAL_WIDTH - len(f".    > [{sha}] ") - len(right_part) - 3
                 
                 if len(msg) > avail_msg:
-                    msg = msg[:max(0, avail_msg-3)] + "..."
+                    msg = msg[:max(0, avail_msg)]
                 
                 left_for_calc = f".    > [{sha}] {msg} "
                 dots = "." * max(1, TOTAL_WIDTH - len(left_for_calc) - len(right_part))
