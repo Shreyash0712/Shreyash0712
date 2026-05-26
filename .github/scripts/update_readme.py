@@ -51,6 +51,7 @@ def main():
     today_prs = 0
     today_issues = 0
     today_stars = 0
+    recent_activity = []
     
     try:
         now = datetime.now(timezone.utc)
@@ -64,8 +65,23 @@ def main():
             repo_name = event["repo"]["name"]
             
             if etype == "PushEvent":
-                today_commits += event["payload"].get("size", 1)
-                today_repos.add(repo_name.split("/")[-1])
+                size = event["payload"].get("size", 1)
+                today_commits += size
+                r_name = repo_name.split("/")[-1]
+                today_repos.add(r_name)
+                
+                ist_time = event_time + timedelta(hours=5, minutes=30)
+                time_str = ist_time.strftime("%H:%M IST")
+                
+                commits_list = event["payload"].get("commits", [])
+                if commits_list:
+                    for c in commits_list:
+                        sha = c.get("sha", "")[:7]
+                        msg = c.get("message", "").split("\n")[0][:25]
+                        recent_activity.append((sha, msg, r_name, time_str))
+                else:
+                    push_id = str(event["payload"].get("push_id", "Push"))[:7]
+                    recent_activity.append((push_id, f"Pushed {size} commit(s)", r_name, time_str))
             elif etype == "PullRequestEvent" and event["payload"].get("action") in ["opened", "closed"]:
                 today_prs += 1
             elif etype == "IssuesEvent" and event["payload"].get("action") in ["opened", "closed"]:
@@ -244,6 +260,12 @@ def main():
                 repos_str = f"{len(today_repos)} repositories"
             lines.append(pad_line("Pushed", f"{today_commits} commits to {repos_str}"))
             
+            for sha, msg, repo, tstr in recent_activity[:5]:
+                msg_str = f"   > [{sha}] {msg} - {repo} @ {tstr}"
+                if len(msg_str) > TOTAL_WIDTH - 2:
+                    msg_str = msg_str[:TOTAL_WIDTH - 5] + "..."
+                lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(msg_str)}</tspan>')
+            
         if today_prs > 0:
             lines.append(pad_line("Pull.Requests", f"Worked on {today_prs} PR(s)"))
             
@@ -259,6 +281,7 @@ def main():
         dots_color = "#484f58" if theme == "dark" else "#d0d7de"
         value_color = "#c9d1d9" if theme == "dark" else "#24292f"
         header_color = "#3fb950" if theme == "dark" else "#1a7f37"
+        muted_color = "#8b949e" if theme == "dark" else "#57606a"
         
         height = 18 * len(lines) + 40
         
@@ -270,6 +293,7 @@ def main():
             f'  .dots {{ fill: {dots_color}; }}',
             f'  .value {{ fill: {value_color}; }}',
             f'  .header {{ fill: {header_color}; font-weight: bold; }}',
+            f'  .muted {{ fill: {muted_color}; }}',
             f'</style>',
             f'<rect width="100%" height="100%" fill="{bg_color}" rx="10" />',
             f'<g class="text">'
