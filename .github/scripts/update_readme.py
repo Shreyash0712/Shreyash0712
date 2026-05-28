@@ -306,11 +306,17 @@ def main():
         pad_double("Repos", f"{fmt(public_repos)} [Contrib: {fmt(contrib)}]", "Stars", fmt(stars)),
         pad_double("Commits", fmt(commits), "Followers", fmt(followers)),
         pad_double("Pull.Requests", fmt(prs), "Lines.of.Code", f"~{fmt(total_loc)}"),
+        '<tspan class="dots">.</tspan>',
+        make_header("Commit.graph"),
     ]
+    
+    graph_start_line_index = len(lines)
+    if counts:
+        lines.extend([""] * 6)
     
     if any([today_commits, today_prs, today_issues, today_stars, today_forks, today_releases, today_comments, today_reviews]):
         lines.append('<tspan class="dots">.</tspan>')
-        lines.append(make_header("Today.(Last.24h)"))
+        lines.append(make_header("Last.24h"))
         
         if today_commits > 0:
             repos_str = ", ".join(today_repos)
@@ -453,9 +459,9 @@ def main():
         graph_h = 100
         graph_w = 560
         x_start = 45
-        y_start = 18 * len(lines) + 40
+        y_start = 30 + graph_start_line_index * 18 + 5
         
-        height = y_start + (graph_h + 20 if counts else 20)
+        height = 18 * len(lines) + 40
         
         svg = [
             f'<svg width="100%" viewBox="0 0 650 {height}" xmlns="http://www.w3.org/2000/svg">',
