@@ -1,4 +1,4 @@
-<svg width="100%" viewBox="0 0 650 700" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" viewBox="0 0 650 742" xmlns="http://www.w3.org/2000/svg">
 <style>
   .text { font-family: "Courier New", Courier, monospace; font-size: 12px; }
   .label { fill: #0969da; font-weight: bold; }
@@ -32,41 +32,50 @@
 <text x="20" y="390" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Commits: </tspan><tspan class="dots">........................</tspan><tspan class="value"> 128</tspan><tspan class="dots"> | </tspan><tspan class="label">Followers: </tspan><tspan class="dots">...........................</tspan><tspan class="value"> 6</tspan></text>
 <text x="20" y="408" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pull.Requests: </tspan><tspan class="dots">....................</tspan><tspan class="value"> 2</tspan><tspan class="dots"> | </tspan><tspan class="label">Lines.of.Code: </tspan><tspan class="dots">.................</tspan><tspan class="value"> ~20,544</tspan></text>
 <text x="20" y="426" xml:space="preserve"><tspan class="dots">.</tspan></text>
-<text x="20" y="444" xml:space="preserve"><tspan class="header">- Today.(Last.24h) ---------------------------------------------------------------</tspan></text>
-<text x="20" y="462" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pushed: </tspan><tspan class="dots">..................................</tspan><tspan class="value"> 5 commits to collab-fun, Shreyash0712</tspan></text>
-<text x="20" y="480" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [f97288f] activity graph changed </tspan><tspan class="dots">.................</tspan><tspan class="muted"> Shreyash0712 @ 19:42 IST</tspan></text>
-<text x="20" y="498" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [954f22c] prevent default event fix tldraw </tspan><tspan class="dots">.........</tspan><tspan class="muted"> collab-fun @ 23:14 IST</tspan></text>
-<text x="20" y="516" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [ee69da3] tldraw evaluation key added </tspan><tspan class="dots">..............</tspan><tspan class="muted"> collab-fun @ 22:51 IST</tspan></text>
-<text x="20" y="534" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [8407335] syncing tldraw using yjs fix </tspan><tspan class="dots">.............</tspan><tspan class="muted"> collab-fun @ 22:12 IST</tspan></text>
-<text x="20" y="552" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [4f2068b] scroll behaviour fixed for tldraw </tspan><tspan class="dots">........</tspan><tspan class="muted"> collab-fun @ 21:57 IST</tspan></text>
+<text x="20" y="444" xml:space="preserve"><tspan class="header">- Commit.graph -------------------------------------------------------------------</tspan></text>
+<text x="20" y="462" xml:space="preserve"></text>
+<text x="20" y="480" xml:space="preserve"></text>
+<text x="20" y="498" xml:space="preserve"></text>
+<text x="20" y="516" xml:space="preserve"></text>
+<text x="20" y="534" xml:space="preserve"></text>
+<text x="20" y="552" xml:space="preserve"></text>
+<text x="20" y="570" xml:space="preserve"><tspan class="dots">.</tspan></text>
+<text x="20" y="588" xml:space="preserve"><tspan class="header">- Last.24h -----------------------------------------------------------------------</tspan></text>
+<text x="20" y="606" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pushed: </tspan><tspan class="dots">..................................</tspan><tspan class="value"> 6 commits to Shreyash0712, collab-fun</tspan></text>
+<text x="20" y="624" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [a97572a] minor heading + graph change </tspan><tspan class="dots">...........</tspan><tspan class="muted"> Shreyash0712 @ 19:47 IST</tspan></text>
+<text x="20" y="642" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [f97288f] activity graph changed </tspan><tspan class="dots">.................</tspan><tspan class="muted"> Shreyash0712 @ 19:42 IST</tspan></text>
+<text x="20" y="660" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [954f22c] prevent default event fix tldraw </tspan><tspan class="dots">.........</tspan><tspan class="muted"> collab-fun @ 23:14 IST</tspan></text>
+<text x="20" y="678" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [ee69da3] tldraw evaluation key added </tspan><tspan class="dots">..............</tspan><tspan class="muted"> collab-fun @ 22:51 IST</tspan></text>
+<text x="20" y="696" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [8407335] syncing tldraw using yjs fix </tspan><tspan class="dots">.............</tspan><tspan class="muted"> collab-fun @ 22:12 IST</tspan></text>
+<text x="20" y="714" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [4f2068b] scroll behaviour fixed for tldraw </tspan><tspan class="dots">........</tspan><tspan class="muted"> collab-fun @ 21:57 IST</tspan></text>
 </g>
-<path d="M 45.0 680.0 C 55.37037037037037 680.0, 55.37037037037037 680.0, 65.74074074074073 680.0 C 76.11111111111111 680.0, 76.11111111111111 680.0, 86.48148148148148 680.0 C 96.85185185185185 680.0, 96.85185185185185 680.0, 107.22222222222223 680.0 C 117.5925925925926 680.0, 117.5925925925926 680.0, 127.96296296296296 680.0 C 138.33333333333331 680.0, 138.33333333333331 680.0, 148.7037037037037 680.0 C 159.07407407407408 680.0, 159.07407407407408 680.0, 169.44444444444446 680.0 C 179.81481481481484 680.0, 179.81481481481484 680.0, 190.1851851851852 680.0 C 200.55555555555554 680.0, 200.55555555555554 680.0, 210.92592592592592 680.0 C 221.2962962962963 680.0, 221.2962962962963 676.6666666666666, 231.66666666666666 676.6666666666666 C 242.037037037037 676.6666666666666, 242.037037037037 653.3333333333334, 252.4074074074074 653.3333333333334 C 262.77777777777777 653.3333333333334, 262.77777777777777 673.3333333333334, 273.14814814814815 673.3333333333334 C 283.51851851851853 673.3333333333334, 283.51851851851853 676.6666666666666, 293.8888888888889 676.6666666666666 C 304.25925925925924 676.6666666666666, 304.25925925925924 680.0, 314.6296296296296 680.0 C 325.0 680.0, 325.0 680.0, 335.3703703703704 680.0 C 345.74074074074076 680.0, 345.74074074074076 680.0, 356.1111111111111 680.0 C 366.48148148148147 680.0, 366.48148148148147 680.0, 376.85185185185185 680.0 C 387.22222222222223 680.0, 387.22222222222223 680.0, 397.5925925925926 680.0 C 407.96296296296293 680.0, 407.96296296296293 680.0, 418.3333333333333 680.0 C 428.7037037037037 680.0, 428.7037037037037 680.0, 439.0740740740741 680.0 C 449.44444444444446 680.0, 449.44444444444446 680.0, 459.8148148148148 680.0 C 470.18518518518516 680.0, 470.18518518518516 680.0, 480.55555555555554 680.0 C 490.9259259259259 680.0, 490.9259259259259 680.0, 501.2962962962963 680.0 C 511.66666666666663 680.0, 511.66666666666663 680.0, 522.037037037037 680.0 C 532.4074074074074 680.0, 532.4074074074074 656.6666666666666, 542.7777777777778 656.6666666666666 C 553.1481481481482 656.6666666666666, 553.1481481481482 586.6666666666666, 563.5185185185185 586.6666666666666 C 573.8888888888889 586.6666666666666, 573.8888888888889 666.6666666666666, 584.2592592592592 666.6666666666666 C 594.6296296296296 666.6666666666666, 594.6296296296296 680.0, 605.0 680.0" fill="none" stroke="#1a7f37" stroke-width="3" />
-<circle cx="45.0" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="65.74074074074073" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="86.48148148148148" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="107.22222222222223" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="127.96296296296296" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="148.7037037037037" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="169.44444444444446" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="190.1851851851852" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="210.92592592592592" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="231.66666666666666" cy="676.6666666666666" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="252.4074074074074" cy="653.3333333333334" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="273.14814814814815" cy="673.3333333333334" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="293.8888888888889" cy="676.6666666666666" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="314.6296296296296" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="335.3703703703704" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="356.1111111111111" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="376.85185185185185" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="397.5925925925926" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="418.3333333333333" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="439.0740740740741" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="459.8148148148148" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="480.55555555555554" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="501.2962962962963" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="522.037037037037" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="542.7777777777778" cy="656.6666666666666" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="563.5185185185185" cy="586.6666666666666" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="584.2592592592592" cy="666.6666666666666" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
-<circle cx="605.0" cy="680.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<path d="M 45.0 567.0 C 55.37037037037037 567.0, 55.37037037037037 567.0, 65.74074074074073 567.0 C 76.11111111111111 567.0, 76.11111111111111 567.0, 86.48148148148148 567.0 C 96.85185185185185 567.0, 96.85185185185185 567.0, 107.22222222222223 567.0 C 117.5925925925926 567.0, 117.5925925925926 567.0, 127.96296296296296 567.0 C 138.33333333333331 567.0, 138.33333333333331 567.0, 148.7037037037037 567.0 C 159.07407407407408 567.0, 159.07407407407408 567.0, 169.44444444444446 567.0 C 179.81481481481484 567.0, 179.81481481481484 567.0, 190.1851851851852 567.0 C 200.55555555555554 567.0, 200.55555555555554 567.0, 210.92592592592592 567.0 C 221.2962962962963 567.0, 221.2962962962963 563.6666666666666, 231.66666666666666 563.6666666666666 C 242.037037037037 563.6666666666666, 242.037037037037 540.3333333333334, 252.4074074074074 540.3333333333334 C 262.77777777777777 540.3333333333334, 262.77777777777777 560.3333333333334, 273.14814814814815 560.3333333333334 C 283.51851851851853 560.3333333333334, 283.51851851851853 563.6666666666666, 293.8888888888889 563.6666666666666 C 304.25925925925924 563.6666666666666, 304.25925925925924 567.0, 314.6296296296296 567.0 C 325.0 567.0, 325.0 567.0, 335.3703703703704 567.0 C 345.74074074074076 567.0, 345.74074074074076 567.0, 356.1111111111111 567.0 C 366.48148148148147 567.0, 366.48148148148147 567.0, 376.85185185185185 567.0 C 387.22222222222223 567.0, 387.22222222222223 567.0, 397.5925925925926 567.0 C 407.96296296296293 567.0, 407.96296296296293 567.0, 418.3333333333333 567.0 C 428.7037037037037 567.0, 428.7037037037037 567.0, 439.0740740740741 567.0 C 449.44444444444446 567.0, 449.44444444444446 567.0, 459.8148148148148 567.0 C 470.18518518518516 567.0, 470.18518518518516 567.0, 480.55555555555554 567.0 C 490.9259259259259 567.0, 490.9259259259259 567.0, 501.2962962962963 567.0 C 511.66666666666663 567.0, 511.66666666666663 567.0, 522.037037037037 567.0 C 532.4074074074074 567.0, 532.4074074074074 543.6666666666666, 542.7777777777778 543.6666666666666 C 553.1481481481482 543.6666666666666, 553.1481481481482 473.6666666666667, 563.5185185185185 473.6666666666667 C 573.8888888888889 473.6666666666667, 573.8888888888889 553.6666666666666, 584.2592592592592 553.6666666666666 C 594.6296296296296 553.6666666666666, 594.6296296296296 567.0, 605.0 567.0" fill="none" stroke="#1a7f37" stroke-width="3" />
+<circle cx="45.0" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="65.74074074074073" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="86.48148148148148" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="107.22222222222223" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="127.96296296296296" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="148.7037037037037" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="169.44444444444446" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="190.1851851851852" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="210.92592592592592" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="231.66666666666666" cy="563.6666666666666" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="252.4074074074074" cy="540.3333333333334" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="273.14814814814815" cy="560.3333333333334" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="293.8888888888889" cy="563.6666666666666" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="314.6296296296296" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="335.3703703703704" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="356.1111111111111" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="376.85185185185185" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="397.5925925925926" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="418.3333333333333" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="439.0740740740741" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="459.8148148148148" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="480.55555555555554" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="501.2962962962963" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="522.037037037037" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="542.7777777777778" cy="543.6666666666666" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="563.5185185185185" cy="473.6666666666667" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="584.2592592592592" cy="553.6666666666666" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
+<circle cx="605.0" cy="567.0" r="3" fill="#57606a" stroke="#ffffff" stroke-width="1" />
 </svg>
