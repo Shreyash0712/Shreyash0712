@@ -182,6 +182,7 @@ def main():
             weeks {
               contributionDays {
                 contributionCount
+                date
               }
             }
           }
@@ -204,26 +205,15 @@ def main():
         days = []
         for week in weeks:
             days.extend(week["contributionDays"])
-        last_14_days = days[-14:]
-        counts = [day["contributionCount"] for day in last_14_days]
-        
-        ticks = ['▂', '▃', '▄', '▅', '▆', '▇']
-        max_val = max(counts) if counts else 0
-        sparkline = ""
-        for count in counts:
-            if max_val == 0:
-                sparkline += ticks[0]
-            else:
-                last = len(ticks) - 1
-                idx = max(0, min(last, int((count / max_val) * last)))
-                if count == 0:
-                    idx = 0
-                sparkline += ticks[idx]
+        last_28_days = days[-28:]
+        counts = [day["contributionCount"] for day in last_28_days]
+        dates = [day["date"] for day in last_28_days]
     except Exception as e:
         commits = "N/A"
         prs = "N/A"
         contrib = "N/A"
-        sparkline = "              "
+        counts = []
+        dates = []
 
     # 4. Date and Uptime
     dob = date(2004, 12, 7) 
@@ -316,7 +306,6 @@ def main():
         pad_double("Repos", f"{fmt(public_repos)} [Contrib: {fmt(contrib)}]", "Stars", fmt(stars)),
         pad_double("Commits", fmt(commits), "Followers", fmt(followers)),
         pad_double("Pull.Requests", fmt(prs), "Lines.of.Code", f"~{fmt(total_loc)}"),
-        pad_activity("Activity.(14d)", sparkline),
     ]
     
     if any([today_commits, today_prs, today_issues, today_stars, today_forks, today_releases, today_comments, today_reviews]):
@@ -450,15 +439,23 @@ def main():
                 rendered_left = f"   > {title} "
                 lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(rendered_left)}</tspan><tspan class="dots">{dots}</tspan><tspan class="muted">{esc(right_part)}</tspan>')
 
-    def generate_svg(theme):
+    def generate_svg(theme, counts, dates):
+        import math
         bg_color = "#0d1117" if theme == "dark" else "#ffffff"
         label_color = "#58a6ff" if theme == "dark" else "#0969da"
         dots_color = "#484f58" if theme == "dark" else "#d0d7de"
         value_color = "#c9d1d9" if theme == "dark" else "#24292f"
         header_color = "#3fb950" if theme == "dark" else "#1a7f37"
         muted_color = "#8b949e" if theme == "dark" else "#57606a"
+        line_color = "#3fb950" if theme == "dark" else "#1a7f37"
+        grid_color = "#30363d" if theme == "dark" else "#ebf0f4"
         
-        height = 18 * len(lines) + 40
+        graph_h = 100
+        graph_w = 560
+        x_start = 45
+        y_start = 18 * len(lines) + 40
+        
+        height = y_start + (graph_h + 20 if counts else 20)
         
         svg = [
             f'<svg width="100%" viewBox="0 0 650 {height}" xmlns="http://www.w3.org/2000/svg">',
@@ -479,15 +476,45 @@ def main():
             svg.append(f'<text x="20" y="{y}" xml:space="preserve">{line}</text>')
             
         svg.append('</g>')
+        
+        if counts:
+            max_val = max(counts)
+            if max_val == 0:
+                max_val = 5
+            grid_max = math.ceil(max_val / 5) * 5
+            if grid_max == 0:
+                grid_max = 5
+                
+            # Points
+            points = []
+            for i, count in enumerate(counts):
+                x = x_start + i * (graph_w / (len(counts) - 1))
+                y = y_start + graph_h - (count / grid_max) * graph_h
+                points.append((x, y))
+            
+            # Path
+            d = f"M {points[0][0]} {points[0][1]}"
+            for i in range(1, len(points)):
+                p0 = points[i-1]
+                p1 = points[i]
+                cx = (p0[0] + p1[0]) / 2
+                d += f" C {cx} {p0[1]}, {cx} {p1[1]}, {p1[0]} {p1[1]}"
+                
+            svg.append(f'<path d="{d}" fill="none" stroke="{line_color}" stroke-width="3" />')
+            
+            # Dots
+            for p in points:
+                svg.append(f'<circle cx="{p[0]}" cy="{p[1]}" r="3" fill="{muted_color}" stroke="{bg_color}" stroke-width="1" />')
+
         svg.append('</svg>')
         return "\n".join(svg)
 
     # 6. Save SVGs
     with open("github-metrics-dark.svg", "w") as f:
-        f.write(generate_svg("dark"))
+        f.write(generate_svg("dark", counts, dates))
         
     with open("github-metrics-light.svg", "w") as f:
-        f.write(generate_svg("light"))
+        f.write(generate_svg("light", counts, dates))
 
     # 7. Update README.md
     readme_content = """<picture>
