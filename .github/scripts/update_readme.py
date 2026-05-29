@@ -491,6 +491,12 @@ def main():
             if grid_max == 0:
                 grid_max = 5
                 
+            # Y-axis labels
+            for i in range(6):
+                val = int(grid_max * (5 - i) / 5)
+                y = y_start + i * (graph_h / 5)
+                svg.append(f'<text x="{x_start - 10}" y="{y + 4}" fill="{muted_color}" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">{val}</text>')
+                
             # Points
             points = []
             for i, count in enumerate(counts):
