@@ -4,10 +4,8 @@ import json
 from datetime import date, datetime, timezone, timedelta
 import re
 
-from user_config import (
-    GITHUB_USERNAME,
-    TERMINAL_SECTIONS
-)
+import user_config
+import components
 
 def fetch_json(url, token):
     req = urllib.request.Request(url)
@@ -30,10 +28,20 @@ def main():
         print("No GITHUB_TOKEN provided")
         return
     
-    username = GITHUB_USERNAME
+    repo_env = os.environ.get("GITHUB_REPOSITORY")
+    if repo_env and "/" in repo_env:
+        username = repo_env.split("/")[0]
+    else:
+        print("Error: GITHUB_REPOSITORY environment variable not found. Please run this script inside GitHub Actions or export GITHUB_REPOSITORY='your_username/repo'.")
+        return
     
     # 1. User Data
-    user_data = fetch_json(f"https://api.github.com/users/{username}", token)
+    try:
+        user_data = fetch_json(f"https://api.github.com/users/{username}", token)
+    except Exception as e:
+        print(f"Error fetching user {username}: {e}")
+        return
+        
     followers = user_data.get("followers", 0)
     public_repos = user_data.get("public_repos", 0)
     
@@ -289,7 +297,7 @@ def main():
     graph_start_line_index = -1
     last_24_events = []
 
-    for section in TERMINAL_SECTIONS:
+    for section in components.REGISTERED_COMPONENTS:
         if section.type == "value":
             lines.append(pad_line(section.key, section.value))
             

@@ -13,32 +13,30 @@ To use this script, you need a GitHub Personal Access Token (PAT).
 7. Name it "GITHUB_TOKEN" and paste your token in the secret field.
 =====================================================================
 """
-# 1. General Info (Required for Github Stats)
-GITHUB_USERNAME = "Shreyash0712"
 
-# 2. Terminal Layout
+# Layout
 # You can easily add, remove, or modify the structure of your profile using these components.
 # Check out components.py to understand what components are available and possible arguments for each. 
-TERMINAL_SECTIONS = [
-    Heading("Shreyash@Swami", CurrentDate()),
-    Value("OS", "Windows 11, Linux (Fedora)"),
-    TimeElapsed("Uptime", 2004, 12, 7),
-    Value("IDE", "VSCode, Antigravity, IntelliJ"),
-    Value("Status", "Open For Work"),
-    Separator(),
-    Separator(),
-    Value("Languages.Programming", "JavaScript, Java, Python"),
-    Value("Languages.Real", "English, Hindi"),
-    Separator(),
-    Value("Hobbies.Software", "Web-Dev, AI, Cloud"),
-    Value("Hobbies.Hardware", "Table-Tennis, Reading"),
-    Separator(),
-    Heading("Contact"),
-    Value("Email", "shreyash.swami2476@gmail.com"),
-    Value("LinkedIn", "in/shreyashswami"),
-    Separator(),
-    GithubStats("Repos", "Stars", "Commits", "Followers", "Pull.Requests", "Lines.of.Code"),
-    Separator(),
-    CommitGraph(),
-    Last24Hr("Pushes", "Pull.Requests", "Issues", "Forked", "Releases", "Reviewed", "Comments")
-]
+
+Heading("Shreyash@Swami", CurrentDate())
+Value("OS", "Windows 11, Linux (Fedora)")
+TimeElapsed("Uptime", 2004, 12, 7)
+Value("IDE", "VSCode, Antigravity, IntelliJ")
+Value("Status", "Open For Work")
+Separator()
+WorkingOn()
+Separator()
+Value("Languages.Programming", "JavaScript, Java, Python")
+Value("Languages.Real", "English, Hindi")
+Separator()
+Value("Hobbies.Software", "Web-Dev, AI, Cloud")
+Value("Hobbies.Hardware", "Table-Tennis, Reading")
+Separator()
+Heading("Contact")
+Value("Email", "shreyash.swami2476@gmail.com")
+Value("LinkedIn", "in/shreyashswami")
+Separator()
+GithubStats("Repos", "Stars", "Commits", "Followers", "Pull.Requests", "Lines.of.Code")
+Separator()
+CommitGraph()
+Last24Hr("Pushes", "Pull.Requests", "Issues", "Starred", "Forked", "Releases", "Reviewed", "Comments")
