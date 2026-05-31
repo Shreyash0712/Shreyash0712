@@ -4,6 +4,11 @@ import json
 from datetime import date, datetime, timezone, timedelta
 import re
 
+from user_config import (
+    GITHUB_USERNAME,
+    TERMINAL_SECTIONS
+)
+
 def fetch_json(url, token):
     req = urllib.request.Request(url)
     if token:
@@ -25,7 +30,7 @@ def main():
         print("No GITHUB_TOKEN provided")
         return
     
-    username = "Shreyash0712"
+    username = GITHUB_USERNAME
     
     # 1. User Data
     user_data = fetch_json(f"https://api.github.com/users/{username}", token)
@@ -215,23 +220,24 @@ def main():
         counts = []
         dates = []
 
-    # 4. Date and Uptime
-    dob = date(2004, 12, 7) 
+    # 4. Date
     today = date.today()
-    
-    years = today.year - dob.year
-    months = today.month - dob.month
-    days = today.day - dob.day
-    
-    if days < 0:
-        months -= 1
-        days += 30 
-    if months < 0:
-        years -= 1
-        months += 12
-        
-    uptime_str = f"{years} years, {months} months, {days} days"
     current_date_str = today.strftime("%B %d, %Y")
+    
+    def calculate_time_elapsed(year, month, day):
+        start_date = date(year, month, day)
+        years = today.year - start_date.year
+        months = today.month - start_date.month
+        days = today.day - start_date.day
+        
+        if days < 0:
+            months -= 1
+            days += 30 
+        if months < 0:
+            years -= 1
+            months += 12
+            
+        return f"{years} years, {months} months, {days} days"
 
     def fmt(n):
         return f"{n:,}" if isinstance(n, int) else str(n)
@@ -266,15 +272,10 @@ def main():
         
         return f'{t_p1}<tspan class="dots"> | </tspan>{t_p2}'
 
-    def make_header(title):
-        base = f"- {title} "
-        dashes = "-" * max(1, TOTAL_WIDTH - len(base))
-        return f'<tspan class="header">{esc(base)}{dashes}</tspan>'
-        
-    def make_top_header(title, right_text):
+    def make_header(title, right_text=None):
         base = f"{title} "
-        right = f" ({right_text})"
-        dashes = "-" * max(1, (TOTAL_WIDTH - len(base) - len(right)))
+        right = f" ({right_text})" if right_text else ""
+        dashes = "-" * max(1, TOTAL_WIDTH - len(base) - len(right))
         return f'<tspan class="header">{esc(base)}{dashes}{esc(right)}</tspan>'
 
     def pad_activity(label, sparkline_str):
@@ -283,42 +284,70 @@ def main():
         dots = "." * max(1, (TOTAL_WIDTH - len(left) - len(right)))
         return f'<tspan class="dots">. </tspan><tspan class="label">{esc(label)}: </tspan><tspan class="dots">{dots} [</tspan><tspan class="header" dominant-baseline="text-after-edge">{esc(sparkline_str)}</tspan><tspan class="dots">]</tspan>'
 
-    lines = [
-        make_top_header("shreyash@swami", current_date_str),
-        pad_line("OS", "Windows 11, Linux (Fedora)"),
-        pad_line("Uptime", uptime_str),
-        pad_line("IDE", "VSCode, Antigravity, IntelliJ"),
-        pad_line("Status", "Open For Work"),
-        '<tspan class="dots">.</tspan>',
-        pad_line("Working.on", working_on),
-        '<tspan class="dots">.</tspan>',
-        pad_line("Languages.Programming", "JavaScript, Java, Python"),
-        pad_line("Languages.Real", "English, Hindi"),
-        '<tspan class="dots">.</tspan>',
-        pad_line("Hobbies.Software", "Web-Dev, AI, Cloud"),
-        pad_line("Hobbies.Hardware", "Table-Tennis, Reading"),
-        '<tspan class="dots">.</tspan>',
-        make_header("Contact"),
-        pad_line("Email", "shreyash.swami2476@gmail.com"),
-        pad_line("LinkedIn", "in/shreyashswami"),
-        '<tspan class="dots">.</tspan>',
-        make_header("GitHub-Stats"),
-        pad_double("Repos", f"{fmt(public_repos)} [Contrib: {fmt(contrib)}]", "Stars", fmt(stars)),
-        pad_double("Commits", fmt(commits), "Followers", fmt(followers)),
-        pad_double("Pull.Requests", fmt(prs), "Lines.of.Code", f"~{fmt(total_loc)}"),
-        '<tspan class="dots">.</tspan>',
-        make_header("Commit.graph"),
-    ]
-    
-    graph_start_line_index = len(lines)
-    if counts:
-        lines.extend([""] * 6)
-    
-    if any([today_commits, today_prs, today_issues, today_stars, today_forks, today_releases, today_comments, today_reviews]):
+    lines = []
+
+    graph_start_line_index = -1
+    last_24_events = []
+
+    for section in TERMINAL_SECTIONS:
+        if section.type == "value":
+            lines.append(pad_line(section.key, section.value))
+            
+        elif section.type == "time_elapsed":
+            elapsed_str = calculate_time_elapsed(section.year, section.month, section.day)
+            lines.append(pad_line(section.key, elapsed_str))
+            
+        elif section.type == "separator":
+            lines.append('<tspan class="dots">.</tspan>')
+            
+        elif section.type == "heading":
+            if section.right_text is not None:
+                if getattr(section.right_text, "type", None) == "current_date":
+                    lines.append(make_header(section.title, current_date_str))
+                else:
+                    lines.append(make_header(section.title, str(section.right_text)))
+            else:
+                lines.append(make_header(section.title))
+            
+        elif section.type == "working_on":
+            lines.append(pad_line("Working.on", working_on))
+                
+        elif section.type == "github_stats":
+            lines.append(make_header("GitHub-Stats"))
+            stat_map = {
+                "Repos": f"{fmt(public_repos)} [Contrib: {fmt(contrib)}]",
+                "Stars": fmt(stars),
+                "Commits": fmt(commits),
+                "Followers": fmt(followers),
+                "Pull.Requests": fmt(prs),
+                "Lines.of.Code": f"~{fmt(total_loc)}"
+            }
+            
+            for i in range(0, len(section.stats), 2):
+                key1 = section.stats[i]
+                val1 = stat_map.get(key1, "N/A")
+                if i + 1 < len(section.stats):
+                    key2 = section.stats[i+1]
+                    val2 = stat_map.get(key2, "N/A")
+                    lines.append(pad_double(key1, val1, key2, val2))
+                else:
+                    lines.append(pad_line(key1, val1))
+                    
+        elif section.type == "commit_graph":
+            lines.append(make_header("Commit.graph"))
+            graph_start_line_index = len(lines)
+            if counts:
+                lines.extend([""] * 6)
+                    
+        elif section.type == "last_24_hr":
+            last_24_events = section.events
+
+    has_activity = any([today_commits, today_prs, today_issues, today_stars, today_forks, today_releases, today_comments, today_reviews])
+    if has_activity and len(last_24_events) > 0:
         lines.append('<tspan class="dots">.</tspan>')
         lines.append(make_header("Last.24h"))
         
-        if today_commits > 0:
+        if "Pushes" in last_24_events and today_commits > 0:
             repos_str = ", ".join(today_repos)
             if len(repos_str) > 40:
                 repos_str = f"{len(today_repos)} repositories"
@@ -327,121 +356,94 @@ def main():
             for sha, msg, repo, tstr in recent_activity:
                 right_part = f" {repo} @ {tstr}"
                 avail_msg = TOTAL_WIDTH - len(f".    > [{sha}] ") - len(right_part) - 3
-                
                 if len(msg) > avail_msg:
                     msg = msg[:max(0, avail_msg)]
-                
                 left_for_calc = f".    > [{sha}] {msg} "
                 dots = "." * max(1, TOTAL_WIDTH - len(left_for_calc) - len(right_part))
-                
                 rendered_left = f"   > [{sha}] {msg} "
                 lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(rendered_left)}</tspan><tspan class="dots">{dots}</tspan><tspan class="muted">{esc(right_part)}</tspan>')
-            
-        if today_prs > 0:
+                
+        if "Pull.Requests" in last_24_events and today_prs > 0:
             lines.append(pad_line("Pull.Requests", f"Worked on {today_prs} PR(s)"))
-            
             for action, pr_num, pr_title, repo, tstr in recent_prs:
                 right_part = f" {repo} @ {tstr}"
                 prefix = f".    > [{action}] {pr_num} "
                 avail_msg = TOTAL_WIDTH - len(prefix) - len(right_part) - 3
-                
                 title = pr_title
                 if len(title) > avail_msg:
                     title = title[:max(0, avail_msg)]
-                
                 left_for_calc = f"{prefix}{title} "
                 dots = "." * max(1, TOTAL_WIDTH - len(left_for_calc) - len(right_part))
-                
                 rendered_left = f"   > [{action}] {pr_num} {title} "
                 lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(rendered_left)}</tspan><tspan class="dots">{dots}</tspan><tspan class="muted">{esc(right_part)}</tspan>')
-            
-        if today_issues > 0:
+                
+        if "Issues" in last_24_events and today_issues > 0:
             lines.append(pad_line("Issues", f"Worked on {today_issues} issue(s)"))
-            
             for action, issue_num, issue_title, repo, tstr in recent_issues:
                 right_part = f" {repo} @ {tstr}"
                 prefix = f".    > [{action}] {issue_num} "
                 avail_msg = TOTAL_WIDTH - len(prefix) - len(right_part) - 3
-                
                 title = issue_title
                 if len(title) > avail_msg:
                     title = title[:max(0, avail_msg)]
-                
                 left_for_calc = f"{prefix}{title} "
                 dots = "." * max(1, TOTAL_WIDTH - len(left_for_calc) - len(right_part))
-                
                 rendered_left = f"   > [{action}] {issue_num} {title} "
                 lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(rendered_left)}</tspan><tspan class="dots">{dots}</tspan><tspan class="muted">{esc(right_part)}</tspan>')
-            
-        if today_stars > 0:
+                
+        if "Starred" in last_24_events and today_stars > 0:
             lines.append(pad_line("Starred", f"{today_stars} repo(s)"))
-            
             for repo, tstr in recent_stars:
                 right_part = f" @ {tstr}"
                 prefix = f".    > "
-                
                 left_for_calc = f"{prefix}{repo} "
                 dots = "." * max(1, TOTAL_WIDTH - len(left_for_calc) - len(right_part))
-                
                 rendered_left = f"   > {repo} "
                 lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(rendered_left)}</tspan><tspan class="dots">{dots}</tspan><tspan class="muted">{esc(right_part)}</tspan>')
                 
-        if today_forks > 0:
+        if "Forked" in last_24_events and today_forks > 0:
             lines.append(pad_line("Forked", f"{today_forks} repo(s)"))
-            
             for repo, tstr in recent_forks:
                 right_part = f" @ {tstr}"
                 prefix = f".    > "
-                
                 left_for_calc = f"{prefix}{repo} "
                 dots = "." * max(1, TOTAL_WIDTH - len(left_for_calc) - len(right_part))
-                
                 rendered_left = f"   > {repo} "
                 lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(rendered_left)}</tspan><tspan class="dots">{dots}</tspan><tspan class="muted">{esc(right_part)}</tspan>')
                 
-        if today_releases > 0:
+        if "Releases" in last_24_events and today_releases > 0:
             lines.append(pad_line("Releases", f"Published {today_releases} release(s)"))
-            
             for tag, repo, tstr in recent_releases:
                 right_part = f" {repo} @ {tstr}"
                 prefix = f".    > "
                 avail_msg = TOTAL_WIDTH - len(prefix) - len(right_part) - 3
-                
                 title = tag
                 if len(title) > avail_msg:
                     title = title[:max(0, avail_msg)]
-                
                 left_for_calc = f"{prefix}{title} "
                 dots = "." * max(1, TOTAL_WIDTH - len(left_for_calc) - len(right_part))
-                
                 rendered_left = f"   > {title} "
                 lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(rendered_left)}</tspan><tspan class="dots">{dots}</tspan><tspan class="muted">{esc(right_part)}</tspan>')
 
-        if today_reviews > 0:
+        if "Reviewed" in last_24_events and today_reviews > 0:
             lines.append(pad_line("Reviewed", f"{today_reviews} PR(s)"))
-            
             for state, repo, tstr in recent_reviews:
                 right_part = f" {repo} @ {tstr}"
                 prefix = f".    > "
                 title = f"[{state}] PR"
-                
                 left_for_calc = f"{prefix}{title} "
                 dots = "." * max(1, TOTAL_WIDTH - len(left_for_calc) - len(right_part))
-                
                 rendered_left = f"   > {title} "
                 lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(rendered_left)}</tspan><tspan class="dots">{dots}</tspan><tspan class="muted">{esc(right_part)}</tspan>')
 
-        if today_comments > 0:
+        if "Comments" in last_24_events and today_comments > 0:
             lines.append(pad_line("Comments", f"Made {today_comments} comment(s)"))
-            
             for repo, tstr in recent_comments:
                 right_part = f" {repo} @ {tstr}"
                 prefix = f".    > "
                 title = f"Commented"
-                
                 left_for_calc = f"{prefix}{title} "
                 dots = "." * max(1, TOTAL_WIDTH - len(left_for_calc) - len(right_part))
-                
                 rendered_left = f"   > {title} "
                 lines.append(f'<tspan class="dots">. </tspan><tspan class="muted">{esc(rendered_left)}</tspan><tspan class="dots">{dots}</tspan><tspan class="muted">{esc(right_part)}</tspan>')
 
