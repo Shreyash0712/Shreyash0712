@@ -526,7 +526,7 @@ def main():
             
             # Dots
             for p in points:
-                svg.append(f'<circle cx="{p[0]}" cy="{p[1]}" r="3" fill="{muted_color}" stroke="{bg_color}" stroke-width="1" />')
+                svg.append(f'<circle cx="{p[0]}" cy="{p[1]}" r="3" fill="{line_color}" stroke="{bg_color}" stroke-width="1.5" />')
 
         svg.append('</svg>')
         return "\n".join(svg)
