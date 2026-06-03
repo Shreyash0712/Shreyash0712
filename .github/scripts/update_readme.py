@@ -170,19 +170,43 @@ def main():
     except Exception:
         pass
     
-    # 3. Repos (for stars and LOC)
-    repos = fetch_json(f"https://api.github.com/users/{username}/repos?per_page=100", token)
-    stars = sum(repo.get("stargazers_count", 0) for repo in repos)
+    # 3. Repos (for stars, LOC and repo count)
+    repos = []
+    page = 1
+    while True:
+        try:
+            page_repos = fetch_json(f"https://api.github.com/user/repos?per_page=100&page={page}&affiliation=owner", token)
+            if not page_repos:
+                break
+            repos.extend(page_repos)
+            if len(page_repos) < 100:
+                break
+            page += 1
+        except Exception:
+            break
+            
+    if not repos:
+        try:
+            repos = fetch_json(f"https://api.github.com/users/{username}/repos?per_page=100", token)
+        except Exception:
+            repos = []
+
+    own_repos = [
+        repo for repo in repos 
+        if not repo.get("fork", False) and repo.get("owner", {}).get("login") == username
+    ]
+    
+    repo_count = len(own_repos)
+    stars = sum(repo.get("stargazers_count", 0) for repo in own_repos)
     
     total_loc = 0
-    for repo in repos:
-        if not repo.get("fork", False):
-            try:
-                langs = fetch_json(repo["languages_url"], token)
-                total_bytes = sum(langs.values())
-                total_loc += total_bytes // 35 
-            except Exception:
-                pass
+    for repo in own_repos:
+        try:
+            langs = fetch_json(repo["languages_url"], token)
+            total_bytes = sum(langs.values())
+            total_loc += total_bytes // 35 
+        except Exception:
+            pass
             
     # 3. Commits & PRs & Contributed (via GraphQL)
     query = """
@@ -323,7 +347,7 @@ def main():
         elif section.type == "github_stats":
             lines.append(make_header("GitHub-Stats"))
             stat_map = {
-                "Repos": f"{fmt(public_repos)} [Contrib: {fmt(contrib)}]",
+                "Repos": f"{fmt(repo_count)} [Contrib: {fmt(contrib)}]",
                 "Stars": fmt(stars),
                 "Commits": fmt(commits),
                 "Followers": fmt(followers),
