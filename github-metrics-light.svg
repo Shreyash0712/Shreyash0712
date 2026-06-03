@@ -1,4 +1,4 @@
-<svg width="100%" viewBox="0 0 650 742" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" viewBox="0 0 650 724" xmlns="http://www.w3.org/2000/svg">
 <style>
   .text { font-family: "Courier New", Courier, monospace; font-size: 12px; }
   .label { fill: #0969da; font-weight: bold; }
@@ -28,8 +28,8 @@
 <text x="20" y="318" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">LinkedIn: </tspan><tspan class="dots">.....................................................</tspan><tspan class="value"> in/shreyashswami</tspan></text>
 <text x="20" y="336" xml:space="preserve"><tspan class="dots">.</tspan></text>
 <text x="20" y="354" xml:space="preserve"><tspan class="header">GitHub-Stats ---------------------------------------------------------------------</tspan></text>
-<text x="20" y="372" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Repos: </tspan><tspan class="dots">..............</tspan><tspan class="value"> 30 [Contrib: 5]</tspan><tspan class="dots"> | </tspan><tspan class="label">Stars: </tspan><tspan class="dots">...............................</tspan><tspan class="value"> 5</tspan></text>
-<text x="20" y="390" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Commits: </tspan><tspan class="dots">........................</tspan><tspan class="value"> 153</tspan><tspan class="dots"> | </tspan><tspan class="label">Followers: </tspan><tspan class="dots">..........................</tspan><tspan class="value"> 22</tspan></text>
+<text x="20" y="372" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Repos: </tspan><tspan class="dots">..............</tspan><tspan class="value"> 30 [Contrib: 5]</tspan><tspan class="dots"> | </tspan><tspan class="label">Stars: </tspan><tspan class="dots">...............................</tspan><tspan class="value"> 7</tspan></text>
+<text x="20" y="390" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Commits: </tspan><tspan class="dots">........................</tspan><tspan class="value"> 154</tspan><tspan class="dots"> | </tspan><tspan class="label">Followers: </tspan><tspan class="dots">..........................</tspan><tspan class="value"> 24</tspan></text>
 <text x="20" y="408" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pull.Requests: </tspan><tspan class="dots">....................</tspan><tspan class="value"> 2</tspan><tspan class="dots"> | </tspan><tspan class="label">Lines.of.Code: </tspan><tspan class="dots">.................</tspan><tspan class="value"> ~23,046</tspan></text>
 <text x="20" y="426" xml:space="preserve"><tspan class="dots">.</tspan></text>
 <text x="20" y="444" xml:space="preserve"><tspan class="header">Commit.graph ---------------------------------------------------------------------</tspan></text>
@@ -41,13 +41,12 @@
 <text x="20" y="552" xml:space="preserve"></text>
 <text x="20" y="570" xml:space="preserve"><tspan class="dots">.</tspan></text>
 <text x="20" y="588" xml:space="preserve"><tspan class="header">Last.24h -------------------------------------------------------------------------</tspan></text>
-<text x="20" y="606" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pushed: </tspan><tspan class="dots">...................................</tspan><tspan class="value"> 4 commits to Portfolio, Petty-Script</tspan></text>
-<text x="20" y="624" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [d4eef6c] minor readme change </tspan><tspan class="dots">....................</tspan><tspan class="muted"> Petty-Script @ 15:03 IST</tspan></text>
-<text x="20" y="642" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [7691d5d] cron job every 8 hours + on push </tspan><tspan class="dots">.......</tspan><tspan class="muted"> Petty-Script @ 15:01 IST</tspan></text>
-<text x="20" y="660" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [9fef923] follow new people automatically </tspan><tspan class="dots">........</tspan><tspan class="muted"> Petty-Script @ 00:31 IST</tspan></text>
-<text x="20" y="678" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [2acf32c] added search console HTML tag </tspan><tspan class="dots">.............</tspan><tspan class="muted"> Portfolio @ 19:36 IST</tspan></text>
-<text x="20" y="696" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Starred: </tspan><tspan class="dots">.............................................................</tspan><tspan class="value"> 1 repo(s)</tspan></text>
-<text x="20" y="714" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; Petty-Script </tspan><tspan class="dots">..................................................</tspan><tspan class="muted"> @ 23:52 IST</tspan></text>
+<text x="20" y="606" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pushed: </tspan><tspan class="dots">..............................................</tspan><tspan class="value"> 3 commits to Petty-Script</tspan></text>
+<text x="20" y="624" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [12bdd92] 3 hr cron job - just feel like 8 hr i </tspan><tspan class="dots">..</tspan><tspan class="muted"> Petty-Script @ 01:06 IST</tspan></text>
+<text x="20" y="642" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [d4eef6c] minor readme change </tspan><tspan class="dots">....................</tspan><tspan class="muted"> Petty-Script @ 15:03 IST</tspan></text>
+<text x="20" y="660" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [7691d5d] cron job every 8 hours + on push </tspan><tspan class="dots">.......</tspan><tspan class="muted"> Petty-Script @ 15:01 IST</tspan></text>
+<text x="20" y="678" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Starred: </tspan><tspan class="dots">.............................................................</tspan><tspan class="value"> 1 repo(s)</tspan></text>
+<text x="20" y="696" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; Petty-Script </tspan><tspan class="dots">..................................................</tspan><tspan class="muted"> @ 23:06 IST</tspan></text>
 </g>
 <text x="35" y="471.0" fill="#57606a" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">30</text>
 <text x="35" y="491.0" fill="#57606a" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">24</text>
@@ -55,14 +54,14 @@
 <text x="35" y="531.0" fill="#57606a" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">12</text>
 <text x="35" y="551.0" fill="#57606a" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">6</text>
 <text x="35" y="571.0" fill="#57606a" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">0</text>
-<path d="M 45.0 567.0 C 55.37037037037037 567.0, 55.37037037037037 567.0, 65.74074074074073 567.0 C 76.11111111111111 567.0, 76.11111111111111 567.0, 86.48148148148148 567.0 C 96.85185185185185 567.0, 96.85185185185185 563.6666666666666, 107.22222222222223 563.6666666666666 C 117.5925925925926 563.6666666666666, 117.5925925925926 540.3333333333334, 127.96296296296296 540.3333333333334 C 138.33333333333331 540.3333333333334, 138.33333333333331 560.3333333333334, 148.7037037037037 560.3333333333334 C 159.07407407407408 560.3333333333334, 159.07407407407408 563.6666666666666, 169.44444444444446 563.6666666666666 C 179.81481481481484 563.6666666666666, 179.81481481481484 567.0, 190.1851851851852 567.0 C 200.55555555555554 567.0, 200.55555555555554 567.0, 210.92592592592592 567.0 C 221.2962962962963 567.0, 221.2962962962963 567.0, 231.66666666666666 567.0 C 242.037037037037 567.0, 242.037037037037 567.0, 252.4074074074074 567.0 C 262.77777777777777 567.0, 262.77777777777777 567.0, 273.14814814814815 567.0 C 283.51851851851853 567.0, 283.51851851851853 567.0, 293.8888888888889 567.0 C 304.25925925925924 567.0, 304.25925925925924 567.0, 314.6296296296296 567.0 C 325.0 567.0, 325.0 567.0, 335.3703703703704 567.0 C 345.74074074074076 567.0, 345.74074074074076 567.0, 356.1111111111111 567.0 C 366.48148148148147 567.0, 366.48148148148147 567.0, 376.85185185185185 567.0 C 387.22222222222223 567.0, 387.22222222222223 567.0, 397.5925925925926 567.0 C 407.96296296296293 567.0, 407.96296296296293 543.6666666666666, 418.3333333333333 543.6666666666666 C 428.7037037037037 543.6666666666666, 428.7037037037037 473.6666666666667, 439.0740740740741 473.6666666666667 C 449.44444444444446 473.6666666666667, 449.44444444444446 553.6666666666666, 459.8148148148148 553.6666666666666 C 470.18518518518516 553.6666666666666, 470.18518518518516 563.6666666666666, 480.55555555555554 563.6666666666666 C 490.9259259259259 563.6666666666666, 490.9259259259259 553.6666666666666, 501.2962962962963 553.6666666666666 C 511.66666666666663 553.6666666666666, 511.66666666666663 563.6666666666666, 522.037037037037 563.6666666666666 C 532.4074074074074 563.6666666666666, 532.4074074074074 547.0, 542.7777777777778 547.0 C 553.1481481481482 547.0, 553.1481481481482 563.6666666666666, 563.5185185185185 563.6666666666666 C 573.8888888888889 563.6666666666666, 573.8888888888889 483.66666666666663, 584.2592592592592 483.66666666666663 C 594.6296296296296 483.66666666666663, 594.6296296296296 557.0, 605.0 557.0" fill="none" stroke="#1a7f37" stroke-width="3" />
+<path d="M 45.0 567.0 C 55.37037037037037 567.0, 55.37037037037037 567.0, 65.74074074074073 567.0 C 76.11111111111111 567.0, 76.11111111111111 563.6666666666666, 86.48148148148148 563.6666666666666 C 96.85185185185185 563.6666666666666, 96.85185185185185 540.3333333333334, 107.22222222222223 540.3333333333334 C 117.5925925925926 540.3333333333334, 117.5925925925926 560.3333333333334, 127.96296296296296 560.3333333333334 C 138.33333333333331 560.3333333333334, 138.33333333333331 563.6666666666666, 148.7037037037037 563.6666666666666 C 159.07407407407408 563.6666666666666, 159.07407407407408 567.0, 169.44444444444446 567.0 C 179.81481481481484 567.0, 179.81481481481484 567.0, 190.1851851851852 567.0 C 200.55555555555554 567.0, 200.55555555555554 567.0, 210.92592592592592 567.0 C 221.2962962962963 567.0, 221.2962962962963 567.0, 231.66666666666666 567.0 C 242.037037037037 567.0, 242.037037037037 567.0, 252.4074074074074 567.0 C 262.77777777777777 567.0, 262.77777777777777 567.0, 273.14814814814815 567.0 C 283.51851851851853 567.0, 283.51851851851853 567.0, 293.8888888888889 567.0 C 304.25925925925924 567.0, 304.25925925925924 567.0, 314.6296296296296 567.0 C 325.0 567.0, 325.0 567.0, 335.3703703703704 567.0 C 345.74074074074076 567.0, 345.74074074074076 567.0, 356.1111111111111 567.0 C 366.48148148148147 567.0, 366.48148148148147 567.0, 376.85185185185185 567.0 C 387.22222222222223 567.0, 387.22222222222223 543.6666666666666, 397.5925925925926 543.6666666666666 C 407.96296296296293 543.6666666666666, 407.96296296296293 473.6666666666667, 418.3333333333333 473.6666666666667 C 428.7037037037037 473.6666666666667, 428.7037037037037 553.6666666666666, 439.0740740740741 553.6666666666666 C 449.44444444444446 553.6666666666666, 449.44444444444446 563.6666666666666, 459.8148148148148 563.6666666666666 C 470.18518518518516 563.6666666666666, 470.18518518518516 553.6666666666666, 480.55555555555554 553.6666666666666 C 490.9259259259259 553.6666666666666, 490.9259259259259 563.6666666666666, 501.2962962962963 563.6666666666666 C 511.66666666666663 563.6666666666666, 511.66666666666663 547.0, 522.037037037037 547.0 C 532.4074074074074 547.0, 532.4074074074074 563.6666666666666, 542.7777777777778 563.6666666666666 C 553.1481481481482 563.6666666666666, 553.1481481481482 483.66666666666663, 563.5185185185185 483.66666666666663 C 573.8888888888889 483.66666666666663, 573.8888888888889 557.0, 584.2592592592592 557.0 C 594.6296296296296 557.0, 594.6296296296296 563.6666666666666, 605.0 563.6666666666666" fill="none" stroke="#1a7f37" stroke-width="3" />
 <circle cx="45.0" cy="567.0" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
 <circle cx="65.74074074074073" cy="567.0" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
-<circle cx="86.48148148148148" cy="567.0" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
-<circle cx="107.22222222222223" cy="563.6666666666666" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
-<circle cx="127.96296296296296" cy="540.3333333333334" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
-<circle cx="148.7037037037037" cy="560.3333333333334" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
-<circle cx="169.44444444444446" cy="563.6666666666666" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
+<circle cx="86.48148148148148" cy="563.6666666666666" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
+<circle cx="107.22222222222223" cy="540.3333333333334" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
+<circle cx="127.96296296296296" cy="560.3333333333334" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
+<circle cx="148.7037037037037" cy="563.6666666666666" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
+<circle cx="169.44444444444446" cy="567.0" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
 <circle cx="190.1851851851852" cy="567.0" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
 <circle cx="210.92592592592592" cy="567.0" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
 <circle cx="231.66666666666666" cy="567.0" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
@@ -73,15 +72,15 @@
 <circle cx="335.3703703703704" cy="567.0" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
 <circle cx="356.1111111111111" cy="567.0" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
 <circle cx="376.85185185185185" cy="567.0" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
-<circle cx="397.5925925925926" cy="567.0" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
-<circle cx="418.3333333333333" cy="543.6666666666666" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
-<circle cx="439.0740740740741" cy="473.6666666666667" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
-<circle cx="459.8148148148148" cy="553.6666666666666" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
-<circle cx="480.55555555555554" cy="563.6666666666666" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
-<circle cx="501.2962962962963" cy="553.6666666666666" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
-<circle cx="522.037037037037" cy="563.6666666666666" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
-<circle cx="542.7777777777778" cy="547.0" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
-<circle cx="563.5185185185185" cy="563.6666666666666" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
-<circle cx="584.2592592592592" cy="483.66666666666663" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
-<circle cx="605.0" cy="557.0" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
+<circle cx="397.5925925925926" cy="543.6666666666666" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
+<circle cx="418.3333333333333" cy="473.6666666666667" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
+<circle cx="439.0740740740741" cy="553.6666666666666" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
+<circle cx="459.8148148148148" cy="563.6666666666666" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
+<circle cx="480.55555555555554" cy="553.6666666666666" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
+<circle cx="501.2962962962963" cy="563.6666666666666" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
+<circle cx="522.037037037037" cy="547.0" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
+<circle cx="542.7777777777778" cy="563.6666666666666" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
+<circle cx="563.5185185185185" cy="483.66666666666663" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
+<circle cx="584.2592592592592" cy="557.0" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
+<circle cx="605.0" cy="563.6666666666666" r="3" fill="#1a7f37" stroke="#ffffff" stroke-width="1.5" />
 </svg>
