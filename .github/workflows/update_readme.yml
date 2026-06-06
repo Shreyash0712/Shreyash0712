@@ -2,7 +2,7 @@ name: Update README
 
 on:
   schedule:
-    - cron: '0 */8 * * *' 
+    - cron: '30 2,10,18 * * *' 
   workflow_dispatch:
   push:
     branches:
