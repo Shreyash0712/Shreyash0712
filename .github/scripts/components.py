@@ -56,7 +56,7 @@ class CommitGraph(BaseComponent):
 class GithubStats(BaseComponent):
     """
     Shows a two-column layout for GitHub stats.
-    Valid options are: "Repos", "Stars", "Commits", "Followers", "Pull.Requests", "Lines.of.Code".
+    Valid options are: "Repos", "Stars", "Commits", "Followers", "Following", "Pull.Requests", "Lines.of.Code", "Profile.Views".
     Example: GithubStats("Repos", "Commits")
     """
     def __init__(self, *args):
