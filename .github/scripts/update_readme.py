@@ -259,7 +259,7 @@ def main():
     
     profile_views = "N/A"
     try:
-        req = urllib.request.Request(f"https://komarev.com/ghpvc/?username={username}", headers={'User-Agent': 'Mozilla/5.0'})
+        req = urllib.request.Request(f"https://komarev.com/ghpvc/?username={username}&base=173", headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req, timeout=5) as response:
             svg = response.read().decode('utf-8')
             matches = re.findall(r'<text[^>]*>([0-9,]+)</text>', svg)
