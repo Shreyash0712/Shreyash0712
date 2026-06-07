@@ -43,7 +43,6 @@ def main():
         return
         
     followers = user_data.get("followers", 0)
-    following = user_data.get("following", 0)
     public_repos = user_data.get("public_repos", 0)
     
     # 2. Working On (Latest PushEvent)
@@ -257,17 +256,6 @@ def main():
     today = date.today()
     current_date_str = today.strftime("%B %d, %Y")
     
-    profile_views = "N/A"
-    try:
-        req = urllib.request.Request(f"https://komarev.com/ghpvc/?username={username}&base=173", headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req, timeout=5) as response:
-            svg = response.read().decode('utf-8')
-            matches = re.findall(r'<text[^>]*>([0-9,]+)</text>', svg)
-            if matches:
-                profile_views = matches[-1]
-    except Exception:
-        pass
-    
     def calculate_time_elapsed(year, month, day):
         start_date = date(year, month, day)
         years = today.year - start_date.year
@@ -363,10 +351,8 @@ def main():
                 "Stars": fmt(stars),
                 "Commits": fmt(commits),
                 "Followers": fmt(followers),
-                "Following": fmt(following),
                 "Pull.Requests": fmt(prs),
-                "Lines.of.Code": f"~{fmt(total_loc)}",
-                "Profile.Views": profile_views
+                "Lines.of.Code": f"~{fmt(total_loc)}"
             }
             
             for i in range(0, len(section.stats), 2):
