@@ -29,20 +29,20 @@
 <text x="20" y="336" xml:space="preserve"><tspan class="dots">.</tspan></text>
 <text x="20" y="354" xml:space="preserve"><tspan class="header">GitHub-Stats ---------------------------------------------------------------------</tspan></text>
 <text x="20" y="372" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Repos: </tspan><tspan class="dots">..............</tspan><tspan class="value"> 21 [Contrib: 6]</tspan><tspan class="dots"> | </tspan><tspan class="label">Stars: </tspan><tspan class="dots">...............................</tspan><tspan class="value"> 9</tspan></text>
-<text x="20" y="390" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Commits: </tspan><tspan class="dots">........................</tspan><tspan class="value"> 190</tspan><tspan class="dots"> | </tspan><tspan class="label">Followers: </tspan><tspan class="dots">..........................</tspan><tspan class="value"> 45</tspan></text>
-<text x="20" y="408" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Following: </tspan><tspan class="dots">.......................</tspan><tspan class="value"> 53</tspan><tspan class="dots"> | </tspan><tspan class="label">Profile.Views: </tspan><tspan class="dots">.....................</tspan><tspan class="value"> 173</tspan></text>
-<text x="20" y="426" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pull.Requests: </tspan><tspan class="dots">....................</tspan><tspan class="value"> 4</tspan><tspan class="dots"> | </tspan><tspan class="label">Lines.of.Code: </tspan><tspan class="dots">................</tspan><tspan class="value"> ~431,771</tspan></text>
-<text x="20" y="444" xml:space="preserve"><tspan class="dots">.</tspan></text>
-<text x="20" y="462" xml:space="preserve"><tspan class="header">Commit.graph ---------------------------------------------------------------------</tspan></text>
+<text x="20" y="390" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Commits: </tspan><tspan class="dots">........................</tspan><tspan class="value"> 191</tspan><tspan class="dots"> | </tspan><tspan class="label">Followers: </tspan><tspan class="dots">..........................</tspan><tspan class="value"> 45</tspan></text>
+<text x="20" y="408" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pull.Requests: </tspan><tspan class="dots">....................</tspan><tspan class="value"> 4</tspan><tspan class="dots"> | </tspan><tspan class="label">Lines.of.Code: </tspan><tspan class="dots">................</tspan><tspan class="value"> ~431,771</tspan></text>
+<text x="20" y="426" xml:space="preserve"><tspan class="dots">.</tspan></text>
+<text x="20" y="444" xml:space="preserve"><tspan class="header">Commit.graph ---------------------------------------------------------------------</tspan></text>
+<text x="20" y="462" xml:space="preserve"></text>
 <text x="20" y="480" xml:space="preserve"></text>
 <text x="20" y="498" xml:space="preserve"></text>
 <text x="20" y="516" xml:space="preserve"></text>
 <text x="20" y="534" xml:space="preserve"></text>
 <text x="20" y="552" xml:space="preserve"></text>
-<text x="20" y="570" xml:space="preserve"></text>
-<text x="20" y="588" xml:space="preserve"><tspan class="dots">.</tspan></text>
-<text x="20" y="606" xml:space="preserve"><tspan class="header">Last.24h -------------------------------------------------------------------------</tspan></text>
-<text x="20" y="624" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pushed: </tspan><tspan class="dots">.......................</tspan><tspan class="value"> 10 commits to Portfolio, Shreyash0712, Fair-Code</tspan></text>
+<text x="20" y="570" xml:space="preserve"><tspan class="dots">.</tspan></text>
+<text x="20" y="588" xml:space="preserve"><tspan class="header">Last.24h -------------------------------------------------------------------------</tspan></text>
+<text x="20" y="606" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pushed: </tspan><tspan class="dots">.......................</tspan><tspan class="value"> 11 commits to Fair-Code, Portfolio, Shreyash0712</tspan></text>
+<text x="20" y="624" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [a056fe2] updating actions version </tspan><tspan class="dots">...............</tspan><tspan class="muted"> Shreyash0712 @ 17:44 IST</tspan></text>
 <text x="20" y="642" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [4774763] chatbox outside click close </tspan><tspan class="dots">...............</tspan><tspan class="muted"> Portfolio @ 08:49 IST</tspan></text>
 <text x="20" y="660" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [13245f9] toc button UI fix </tspan><tspan class="dots">.........................</tspan><tspan class="muted"> Portfolio @ 08:32 IST</tspan></text>
 <text x="20" y="678" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [666e7e8] readme fix </tspan><tspan class="dots">................................</tspan><tspan class="muted"> Portfolio @ 05:46 IST</tspan></text>
@@ -54,39 +54,39 @@
 <text x="20" y="786" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [e0f7e8f] Base num added </tspan><tspan class="dots">.........................</tspan><tspan class="muted"> Shreyash0712 @ 18:25 IST</tspan></text>
 <text x="20" y="804" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [d5adad9] profile views and following added </tspan><tspan class="dots">......</tspan><tspan class="muted"> Shreyash0712 @ 17:57 IST</tspan></text>
 </g>
-<text x="35" y="489.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">30</text>
-<text x="35" y="509.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">24</text>
-<text x="35" y="529.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">18</text>
-<text x="35" y="549.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">12</text>
-<text x="35" y="569.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">6</text>
-<text x="35" y="589.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">0</text>
-<path d="M 45.0 558.3333333333334 C 55.37037037037037 558.3333333333334, 55.37037037037037 578.3333333333334, 65.74074074074073 578.3333333333334 C 76.11111111111111 578.3333333333334, 76.11111111111111 581.6666666666666, 86.48148148148148 581.6666666666666 C 96.85185185185185 581.6666666666666, 96.85185185185185 585.0, 107.22222222222223 585.0 C 117.5925925925926 585.0, 117.5925925925926 585.0, 127.96296296296296 585.0 C 138.33333333333331 585.0, 138.33333333333331 585.0, 148.7037037037037 585.0 C 159.07407407407408 585.0, 159.07407407407408 585.0, 169.44444444444446 585.0 C 179.81481481481484 585.0, 179.81481481481484 585.0, 190.1851851851852 585.0 C 200.55555555555554 585.0, 200.55555555555554 585.0, 210.92592592592592 585.0 C 221.2962962962963 585.0, 221.2962962962963 585.0, 231.66666666666666 585.0 C 242.037037037037 585.0, 242.037037037037 585.0, 252.4074074074074 585.0 C 262.77777777777777 585.0, 262.77777777777777 585.0, 273.14814814814815 585.0 C 283.51851851851853 585.0, 283.51851851851853 585.0, 293.8888888888889 585.0 C 304.25925925925924 585.0, 304.25925925925924 585.0, 314.6296296296296 585.0 C 325.0 585.0, 325.0 561.6666666666666, 335.3703703703704 561.6666666666666 C 345.74074074074076 561.6666666666666, 345.74074074074076 491.6666666666667, 356.1111111111111 491.6666666666667 C 366.48148148148147 491.6666666666667, 366.48148148148147 571.6666666666666, 376.85185185185185 571.6666666666666 C 387.22222222222223 571.6666666666666, 387.22222222222223 581.6666666666666, 397.5925925925926 581.6666666666666 C 407.96296296296293 581.6666666666666, 407.96296296296293 571.6666666666666, 418.3333333333333 571.6666666666666 C 428.7037037037037 571.6666666666666, 428.7037037037037 581.6666666666666, 439.0740740740741 581.6666666666666 C 449.44444444444446 581.6666666666666, 449.44444444444446 565.0, 459.8148148148148 565.0 C 470.18518518518516 565.0, 470.18518518518516 581.6666666666666, 480.55555555555554 581.6666666666666 C 490.9259259259259 581.6666666666666, 490.9259259259259 501.66666666666663, 501.2962962962963 501.66666666666663 C 511.66666666666663 501.66666666666663, 511.66666666666663 575.0, 522.037037037037 575.0 C 532.4074074074074 575.0, 532.4074074074074 518.3333333333334, 542.7777777777778 518.3333333333334 C 553.1481481481482 518.3333333333334, 553.1481481481482 565.0, 563.5185185185185 565.0 C 573.8888888888889 565.0, 573.8888888888889 551.6666666666666, 584.2592592592592 551.6666666666666 C 594.6296296296296 551.6666666666666, 594.6296296296296 571.6666666666666, 605.0 571.6666666666666" fill="none" stroke="#3fb950" stroke-width="3" />
-<circle cx="45.0" cy="558.3333333333334" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="65.74074074074073" cy="578.3333333333334" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="86.48148148148148" cy="581.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="107.22222222222223" cy="585.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="127.96296296296296" cy="585.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="148.7037037037037" cy="585.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="169.44444444444446" cy="585.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="190.1851851851852" cy="585.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="210.92592592592592" cy="585.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="231.66666666666666" cy="585.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="252.4074074074074" cy="585.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="273.14814814814815" cy="585.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="293.8888888888889" cy="585.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="314.6296296296296" cy="585.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="335.3703703703704" cy="561.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="356.1111111111111" cy="491.6666666666667" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="376.85185185185185" cy="571.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="397.5925925925926" cy="581.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="418.3333333333333" cy="571.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="439.0740740740741" cy="581.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="459.8148148148148" cy="565.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="480.55555555555554" cy="581.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="501.2962962962963" cy="501.66666666666663" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="522.037037037037" cy="575.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="542.7777777777778" cy="518.3333333333334" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="563.5185185185185" cy="565.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="584.2592592592592" cy="551.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="605.0" cy="571.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<text x="35" y="471.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">30</text>
+<text x="35" y="491.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">24</text>
+<text x="35" y="511.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">18</text>
+<text x="35" y="531.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">12</text>
+<text x="35" y="551.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">6</text>
+<text x="35" y="571.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">0</text>
+<path d="M 45.0 540.3333333333334 C 55.37037037037037 540.3333333333334, 55.37037037037037 560.3333333333334, 65.74074074074073 560.3333333333334 C 76.11111111111111 560.3333333333334, 76.11111111111111 563.6666666666666, 86.48148148148148 563.6666666666666 C 96.85185185185185 563.6666666666666, 96.85185185185185 567.0, 107.22222222222223 567.0 C 117.5925925925926 567.0, 117.5925925925926 567.0, 127.96296296296296 567.0 C 138.33333333333331 567.0, 138.33333333333331 567.0, 148.7037037037037 567.0 C 159.07407407407408 567.0, 159.07407407407408 567.0, 169.44444444444446 567.0 C 179.81481481481484 567.0, 179.81481481481484 567.0, 190.1851851851852 567.0 C 200.55555555555554 567.0, 200.55555555555554 567.0, 210.92592592592592 567.0 C 221.2962962962963 567.0, 221.2962962962963 567.0, 231.66666666666666 567.0 C 242.037037037037 567.0, 242.037037037037 567.0, 252.4074074074074 567.0 C 262.77777777777777 567.0, 262.77777777777777 567.0, 273.14814814814815 567.0 C 283.51851851851853 567.0, 283.51851851851853 567.0, 293.8888888888889 567.0 C 304.25925925925924 567.0, 304.25925925925924 567.0, 314.6296296296296 567.0 C 325.0 567.0, 325.0 543.6666666666666, 335.3703703703704 543.6666666666666 C 345.74074074074076 543.6666666666666, 345.74074074074076 473.6666666666667, 356.1111111111111 473.6666666666667 C 366.48148148148147 473.6666666666667, 366.48148148148147 553.6666666666666, 376.85185185185185 553.6666666666666 C 387.22222222222223 553.6666666666666, 387.22222222222223 563.6666666666666, 397.5925925925926 563.6666666666666 C 407.96296296296293 563.6666666666666, 407.96296296296293 553.6666666666666, 418.3333333333333 553.6666666666666 C 428.7037037037037 553.6666666666666, 428.7037037037037 563.6666666666666, 439.0740740740741 563.6666666666666 C 449.44444444444446 563.6666666666666, 449.44444444444446 547.0, 459.8148148148148 547.0 C 470.18518518518516 547.0, 470.18518518518516 563.6666666666666, 480.55555555555554 563.6666666666666 C 490.9259259259259 563.6666666666666, 490.9259259259259 483.66666666666663, 501.2962962962963 483.66666666666663 C 511.66666666666663 483.66666666666663, 511.66666666666663 557.0, 522.037037037037 557.0 C 532.4074074074074 557.0, 532.4074074074074 500.33333333333337, 542.7777777777778 500.33333333333337 C 553.1481481481482 500.33333333333337, 553.1481481481482 547.0, 563.5185185185185 547.0 C 573.8888888888889 547.0, 573.8888888888889 533.6666666666666, 584.2592592592592 533.6666666666666 C 594.6296296296296 533.6666666666666, 594.6296296296296 550.3333333333334, 605.0 550.3333333333334" fill="none" stroke="#3fb950" stroke-width="3" />
+<circle cx="45.0" cy="540.3333333333334" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="65.74074074074073" cy="560.3333333333334" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="86.48148148148148" cy="563.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="107.22222222222223" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="127.96296296296296" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="148.7037037037037" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="169.44444444444446" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="190.1851851851852" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="210.92592592592592" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="231.66666666666666" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="252.4074074074074" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="273.14814814814815" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="293.8888888888889" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="314.6296296296296" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="335.3703703703704" cy="543.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="356.1111111111111" cy="473.6666666666667" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="376.85185185185185" cy="553.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="397.5925925925926" cy="563.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="418.3333333333333" cy="553.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="439.0740740740741" cy="563.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="459.8148148148148" cy="547.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="480.55555555555554" cy="563.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="501.2962962962963" cy="483.66666666666663" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="522.037037037037" cy="557.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="542.7777777777778" cy="500.33333333333337" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="563.5185185185185" cy="547.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="584.2592592592592" cy="533.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="605.0" cy="550.3333333333334" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
 </svg>
