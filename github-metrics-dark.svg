@@ -28,8 +28,8 @@
 <text x="20" y="318" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">LinkedIn: </tspan><tspan class="dots">.....................................................</tspan><tspan class="value"> in/shreyashswami</tspan></text>
 <text x="20" y="336" xml:space="preserve"><tspan class="dots">.</tspan></text>
 <text x="20" y="354" xml:space="preserve"><tspan class="header">GitHub-Stats ---------------------------------------------------------------------</tspan></text>
-<text x="20" y="372" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Repos: </tspan><tspan class="dots">..............</tspan><tspan class="value"> 25 [Contrib: 6]</tspan><tspan class="dots"> | </tspan><tspan class="label">Stars: </tspan><tspan class="dots">..............................</tspan><tspan class="value"> 14</tspan></text>
-<text x="20" y="390" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Commits: </tspan><tspan class="dots">........................</tspan><tspan class="value"> 219</tspan><tspan class="dots"> | </tspan><tspan class="label">Followers: </tspan><tspan class="dots">..........................</tspan><tspan class="value"> 66</tspan></text>
+<text x="20" y="372" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Repos: </tspan><tspan class="dots">..............</tspan><tspan class="value"> 25 [Contrib: 6]</tspan><tspan class="dots"> | </tspan><tspan class="label">Stars: </tspan><tspan class="dots">..............................</tspan><tspan class="value"> 17</tspan></text>
+<text x="20" y="390" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Commits: </tspan><tspan class="dots">........................</tspan><tspan class="value"> 219</tspan><tspan class="dots"> | </tspan><tspan class="label">Followers: </tspan><tspan class="dots">..........................</tspan><tspan class="value"> 67</tspan></text>
 <text x="20" y="408" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pull.Requests: </tspan><tspan class="dots">....................</tspan><tspan class="value"> 4</tspan><tspan class="dots"> | </tspan><tspan class="label">Lines.of.Code: </tspan><tspan class="dots">................</tspan><tspan class="value"> ~445,532</tspan></text>
 <text x="20" y="426" xml:space="preserve"><tspan class="dots">.</tspan></text>
 <text x="20" y="444" xml:space="preserve"><tspan class="header">Commit.graph ---------------------------------------------------------------------</tspan></text>
@@ -40,39 +40,39 @@
 <text x="20" y="534" xml:space="preserve"></text>
 <text x="20" y="552" xml:space="preserve"></text>
 </g>
-<text x="35" y="471.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">30</text>
-<text x="35" y="491.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">24</text>
-<text x="35" y="511.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">18</text>
-<text x="35" y="531.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">12</text>
-<text x="35" y="551.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">6</text>
+<text x="35" y="471.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">25</text>
+<text x="35" y="491.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">20</text>
+<text x="35" y="511.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">15</text>
+<text x="35" y="531.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">10</text>
+<text x="35" y="551.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">5</text>
 <text x="35" y="571.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">0</text>
-<path d="M 45.0 473.6666666666667 C 55.37037037037037 473.6666666666667, 55.37037037037037 553.6666666666666, 65.74074074074073 553.6666666666666 C 76.11111111111111 553.6666666666666, 76.11111111111111 563.6666666666666, 86.48148148148148 563.6666666666666 C 96.85185185185185 563.6666666666666, 96.85185185185185 553.6666666666666, 107.22222222222223 553.6666666666666 C 117.5925925925926 553.6666666666666, 117.5925925925926 563.6666666666666, 127.96296296296296 563.6666666666666 C 138.33333333333331 563.6666666666666, 138.33333333333331 547.0, 148.7037037037037 547.0 C 159.07407407407408 547.0, 159.07407407407408 563.6666666666666, 169.44444444444446 563.6666666666666 C 179.81481481481484 563.6666666666666, 179.81481481481484 483.66666666666663, 190.1851851851852 483.66666666666663 C 200.55555555555554 483.66666666666663, 200.55555555555554 557.0, 210.92592592592592 557.0 C 221.2962962962963 557.0, 221.2962962962963 500.33333333333337, 231.66666666666666 500.33333333333337 C 242.037037037037 500.33333333333337, 242.037037037037 547.0, 252.4074074074074 547.0 C 262.77777777777777 547.0, 262.77777777777777 533.6666666666666, 273.14814814814815 533.6666666666666 C 283.51851851851853 533.6666666666666, 283.51851851851853 540.3333333333334, 293.8888888888889 540.3333333333334 C 304.25925925925924 540.3333333333334, 304.25925925925924 540.3333333333334, 314.6296296296296 540.3333333333334 C 325.0 540.3333333333334, 325.0 567.0, 335.3703703703704 567.0 C 345.74074074074076 567.0, 345.74074074074076 557.0, 356.1111111111111 557.0 C 366.48148148148147 557.0, 366.48148148148147 553.6666666666666, 376.85185185185185 553.6666666666666 C 387.22222222222223 553.6666666666666, 387.22222222222223 547.0, 397.5925925925926 547.0 C 407.96296296296293 547.0, 407.96296296296293 537.0, 418.3333333333333 537.0 C 428.7037037037037 537.0, 428.7037037037037 567.0, 439.0740740740741 567.0 C 449.44444444444446 567.0, 449.44444444444446 560.3333333333334, 459.8148148148148 560.3333333333334 C 470.18518518518516 560.3333333333334, 470.18518518518516 567.0, 480.55555555555554 567.0 C 490.9259259259259 567.0, 490.9259259259259 567.0, 501.2962962962963 567.0 C 511.66666666666663 567.0, 511.66666666666663 550.3333333333334, 522.037037037037 550.3333333333334 C 532.4074074074074 550.3333333333334, 532.4074074074074 567.0, 542.7777777777778 567.0 C 553.1481481481482 567.0, 553.1481481481482 567.0, 563.5185185185185 567.0 C 573.8888888888889 567.0, 573.8888888888889 560.3333333333334, 584.2592592592592 560.3333333333334 C 594.6296296296296 560.3333333333334, 594.6296296296296 567.0, 605.0 567.0" fill="none" stroke="#3fb950" stroke-width="3" />
-<circle cx="45.0" cy="473.6666666666667" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="65.74074074074073" cy="553.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="86.48148148148148" cy="563.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="107.22222222222223" cy="553.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="127.96296296296296" cy="563.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="148.7037037037037" cy="547.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="169.44444444444446" cy="563.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="190.1851851851852" cy="483.66666666666663" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="210.92592592592592" cy="557.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="231.66666666666666" cy="500.33333333333337" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="252.4074074074074" cy="547.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="273.14814814814815" cy="533.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="293.8888888888889" cy="540.3333333333334" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="314.6296296296296" cy="540.3333333333334" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="335.3703703703704" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="356.1111111111111" cy="557.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="376.85185185185185" cy="553.6666666666666" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="397.5925925925926" cy="547.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="418.3333333333333" cy="537.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="439.0740740740741" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="459.8148148148148" cy="560.3333333333334" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<path d="M 45.0 551.0 C 55.37037037037037 551.0, 55.37037037037037 563.0, 65.74074074074073 563.0 C 76.11111111111111 563.0, 76.11111111111111 551.0, 86.48148148148148 551.0 C 96.85185185185185 551.0, 96.85185185185185 563.0, 107.22222222222223 563.0 C 117.5925925925926 563.0, 117.5925925925926 543.0, 127.96296296296296 543.0 C 138.33333333333331 543.0, 138.33333333333331 563.0, 148.7037037037037 563.0 C 159.07407407407408 563.0, 159.07407407407408 467.0, 169.44444444444446 467.0 C 179.81481481481484 467.0, 179.81481481481484 555.0, 190.1851851851852 555.0 C 200.55555555555554 555.0, 200.55555555555554 487.0, 210.92592592592592 487.0 C 221.2962962962963 487.0, 221.2962962962963 543.0, 231.66666666666666 543.0 C 242.037037037037 543.0, 242.037037037037 527.0, 252.4074074074074 527.0 C 262.77777777777777 527.0, 262.77777777777777 535.0, 273.14814814814815 535.0 C 283.51851851851853 535.0, 283.51851851851853 535.0, 293.8888888888889 535.0 C 304.25925925925924 535.0, 304.25925925925924 567.0, 314.6296296296296 567.0 C 325.0 567.0, 325.0 555.0, 335.3703703703704 555.0 C 345.74074074074076 555.0, 345.74074074074076 551.0, 356.1111111111111 551.0 C 366.48148148148147 551.0, 366.48148148148147 543.0, 376.85185185185185 543.0 C 387.22222222222223 543.0, 387.22222222222223 531.0, 397.5925925925926 531.0 C 407.96296296296293 531.0, 407.96296296296293 567.0, 418.3333333333333 567.0 C 428.7037037037037 567.0, 428.7037037037037 559.0, 439.0740740740741 559.0 C 449.44444444444446 559.0, 449.44444444444446 567.0, 459.8148148148148 567.0 C 470.18518518518516 567.0, 470.18518518518516 567.0, 480.55555555555554 567.0 C 490.9259259259259 567.0, 490.9259259259259 547.0, 501.2962962962963 547.0 C 511.66666666666663 547.0, 511.66666666666663 567.0, 522.037037037037 567.0 C 532.4074074074074 567.0, 532.4074074074074 567.0, 542.7777777777778 567.0 C 553.1481481481482 567.0, 553.1481481481482 559.0, 563.5185185185185 559.0 C 573.8888888888889 559.0, 573.8888888888889 567.0, 584.2592592592592 567.0 C 594.6296296296296 567.0, 594.6296296296296 567.0, 605.0 567.0" fill="none" stroke="#3fb950" stroke-width="3" />
+<circle cx="45.0" cy="551.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="65.74074074074073" cy="563.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="86.48148148148148" cy="551.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="107.22222222222223" cy="563.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="127.96296296296296" cy="543.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="148.7037037037037" cy="563.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="169.44444444444446" cy="467.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="190.1851851851852" cy="555.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="210.92592592592592" cy="487.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="231.66666666666666" cy="543.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="252.4074074074074" cy="527.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="273.14814814814815" cy="535.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="293.8888888888889" cy="535.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="314.6296296296296" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="335.3703703703704" cy="555.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="356.1111111111111" cy="551.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="376.85185185185185" cy="543.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="397.5925925925926" cy="531.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="418.3333333333333" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="439.0740740740741" cy="559.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="459.8148148148148" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
 <circle cx="480.55555555555554" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="501.2962962962963" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="522.037037037037" cy="550.3333333333334" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="501.2962962962963" cy="547.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="522.037037037037" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
 <circle cx="542.7777777777778" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="563.5185185185185" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
-<circle cx="584.2592592592592" cy="560.3333333333334" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="563.5185185185185" cy="559.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
+<circle cx="584.2592592592592" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
 <circle cx="605.0" cy="567.0" r="3" fill="#3fb950" stroke="#0d1117" stroke-width="1.5" />
 </svg>
