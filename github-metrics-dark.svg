@@ -1,4 +1,4 @@
-<svg width="100%" viewBox="0 0 650 670" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" viewBox="0 0 650 652" xmlns="http://www.w3.org/2000/svg">
 <style>
   .text { font-family: "Courier New", Courier, monospace; font-size: 12px; }
   .label { fill: #58a6ff; font-weight: bold; }
@@ -41,9 +41,8 @@
 <text x="20" y="552" xml:space="preserve"></text>
 <text x="20" y="570" xml:space="preserve"><tspan class="dots">.</tspan></text>
 <text x="20" y="588" xml:space="preserve"><tspan class="header">Last.24h -------------------------------------------------------------------------</tspan></text>
-<text x="20" y="606" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pushed: </tspan><tspan class="dots">.................................................</tspan><tspan class="value"> 2 commits to Portfolio</tspan></text>
+<text x="20" y="606" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pushed: </tspan><tspan class="dots">.................................................</tspan><tspan class="value"> 1 commits to Portfolio</tspan></text>
 <text x="20" y="624" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [46171b1] cursor animation added </tspan><tspan class="dots">....................</tspan><tspan class="muted"> Portfolio @ 19:43 IST</tspan></text>
-<text x="20" y="642" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [1158beb] anime home page changes </tspan><tspan class="dots">...................</tspan><tspan class="muted"> Portfolio @ 17:02 IST</tspan></text>
 </g>
 <text x="35" y="471.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">10</text>
 <text x="35" y="491.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">8</text>
