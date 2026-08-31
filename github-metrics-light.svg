@@ -1,4 +1,4 @@
-<svg width="100%" viewBox="0 0 650 742" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" viewBox="0 0 650 724" xmlns="http://www.w3.org/2000/svg">
 <style>
   .text { font-family: "Courier New", Courier, monospace; font-size: 12px; }
   .label { fill: #0969da; font-weight: bold; }
@@ -41,13 +41,12 @@
 <text x="20" y="552" xml:space="preserve"></text>
 <text x="20" y="570" xml:space="preserve"><tspan class="dots">.</tspan></text>
 <text x="20" y="588" xml:space="preserve"><tspan class="header">Last.24h -------------------------------------------------------------------------</tspan></text>
-<text x="20" y="606" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pushed: </tspan><tspan class="dots">.................................................</tspan><tspan class="value"> 2 commits to Fair-Code</tspan></text>
+<text x="20" y="606" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pushed: </tspan><tspan class="dots">.................................................</tspan><tspan class="value"> 1 commits to Fair-Code</tspan></text>
 <text x="20" y="624" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [4d7e5de] Add Tenant Screening to PROJECT_ANCHORS/ </tspan><tspan class="dots">..</tspan><tspan class="muted"> Fair-Code @ 09:19 IST</tspan></text>
-<text x="20" y="642" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [ab49831] Credit PR #356 and sushicat75, sync expl </tspan><tspan class="dots">..</tspan><tspan class="muted"> Fair-Code @ 22:25 IST</tspan></text>
-<text x="20" y="660" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Issues: </tspan><tspan class="dots">...................................................</tspan><tspan class="value"> Worked on 1 issue(s)</tspan></text>
-<text x="20" y="678" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [Closed] #350 PROJECT_ANCHORS / projectAnchors map </tspan><tspan class="dots">..</tspan><tspan class="muted"> Fair-Code @ 09:19 IST</tspan></text>
-<text x="20" y="696" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Reviewed: </tspan><tspan class="dots">..............................................................</tspan><tspan class="value"> 1 PR(s)</tspan></text>
-<text x="20" y="714" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [Approved] PR </tspan><tspan class="dots">.......................................</tspan><tspan class="muted"> Fair-Code @ 09:17 IST</tspan></text>
+<text x="20" y="642" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Issues: </tspan><tspan class="dots">...................................................</tspan><tspan class="value"> Worked on 1 issue(s)</tspan></text>
+<text x="20" y="660" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [Closed] #350 PROJECT_ANCHORS / projectAnchors map </tspan><tspan class="dots">..</tspan><tspan class="muted"> Fair-Code @ 09:19 IST</tspan></text>
+<text x="20" y="678" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Reviewed: </tspan><tspan class="dots">..............................................................</tspan><tspan class="value"> 1 PR(s)</tspan></text>
+<text x="20" y="696" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [Approved] PR </tspan><tspan class="dots">.......................................</tspan><tspan class="muted"> Fair-Code @ 09:17 IST</tspan></text>
 </g>
 <text x="35" y="471.0" fill="#57606a" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">5</text>
 <text x="35" y="491.0" fill="#57606a" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">4</text>
