@@ -1,4 +1,4 @@
-<svg width="100%" viewBox="0 0 650 706" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" viewBox="0 0 650 742" xmlns="http://www.w3.org/2000/svg">
 <style>
   .text { font-family: "Courier New", Courier, monospace; font-size: 12px; }
   .label { fill: #58a6ff; font-weight: bold; }
@@ -41,11 +41,13 @@
 <text x="20" y="552" xml:space="preserve"></text>
 <text x="20" y="570" xml:space="preserve"><tspan class="dots">.</tspan></text>
 <text x="20" y="588" xml:space="preserve"><tspan class="header">Last.24h -------------------------------------------------------------------------</tspan></text>
-<text x="20" y="606" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pushed: </tspan><tspan class="dots">...................................</tspan><tspan class="value"> 4 commits to APMC-Market-Forecasting</tspan></text>
-<text x="20" y="624" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [b09a29f] readme update </tspan><tspan class="dots">...............</tspan><tspan class="muted"> APMC-Market-Forecasting @ 11:13 IST</tspan></text>
-<text x="20" y="642" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [a994b77] diagram update </tspan><tspan class="dots">..............</tspan><tspan class="muted"> APMC-Market-Forecasting @ 11:19 IST</tspan></text>
-<text x="20" y="660" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [adc1e63] Phase 4 explanability </tspan><tspan class="dots">.......</tspan><tspan class="muted"> APMC-Market-Forecasting @ 11:10 IST</tspan></text>
-<text x="20" y="678" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [cec5cf7] Update README.md </tspan><tspan class="dots">............</tspan><tspan class="muted"> APMC-Market-Forecasting @ 08:14 IST</tspan></text>
+<text x="20" y="606" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="label">Pushed: </tspan><tspan class="dots">...................................</tspan><tspan class="value"> 6 commits to APMC-Market-Forecasting</tspan></text>
+<text x="20" y="624" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [ca8207d] onnx optimization and phas </tspan><tspan class="dots">..</tspan><tspan class="muted"> APMC-Market-Forecasting @ 12:07 IST</tspan></text>
+<text x="20" y="642" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [e786818] diagram update </tspan><tspan class="dots">..............</tspan><tspan class="muted"> APMC-Market-Forecasting @ 11:16 IST</tspan></text>
+<text x="20" y="660" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [b09a29f] readme update </tspan><tspan class="dots">...............</tspan><tspan class="muted"> APMC-Market-Forecasting @ 11:13 IST</tspan></text>
+<text x="20" y="678" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [a994b77] diagram update </tspan><tspan class="dots">..............</tspan><tspan class="muted"> APMC-Market-Forecasting @ 11:19 IST</tspan></text>
+<text x="20" y="696" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [adc1e63] Phase 4 explanability </tspan><tspan class="dots">.......</tspan><tspan class="muted"> APMC-Market-Forecasting @ 11:10 IST</tspan></text>
+<text x="20" y="714" xml:space="preserve"><tspan class="dots">. </tspan><tspan class="muted">   &gt; [cec5cf7] Update README.md </tspan><tspan class="dots">............</tspan><tspan class="muted"> APMC-Market-Forecasting @ 08:14 IST</tspan></text>
 </g>
 <text x="35" y="471.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">10</text>
 <text x="35" y="491.0" fill="#8b949e" font-size="10" text-anchor="end" font-family="Courier New, Courier, monospace">8</text>
